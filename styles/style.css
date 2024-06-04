@@ -76,6 +76,10 @@ figure {
 table {
 }
 
+button{
+  padding: 2rem;
+}
+
 /* Links
 --------------------------------------------- */
 a,
@@ -170,12 +174,22 @@ section {
 }
 
 .demo-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50rem;
+  height: 40rem;
   margin: 1rem;
   border: 3px solid whitesmoke;
+  position: relative;
+}
+
+#random-movie-btn{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#movie-container{
+  width: fit-content;
+  margin: auto;
 }
 
 /* For practice page */
