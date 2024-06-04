@@ -173,23 +173,42 @@ section {
   margin-bottom: 5rem;
 }
 
+/* Code Demo Section */
+
 .demo-box {
-  height: 40rem;
+  height: 43rem;
   margin: 1rem;
   border: 3px solid whitesmoke;
   position: relative;
 }
 
-#random-movie-btn{
+#buttons{
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+}
+
+#buttons button{
+  width: 50%;
 }
 
 #movie-container{
   width: fit-content;
   margin: auto;
+  padding: 2rem;
+}
+
+#movie-container h3{
+  font-size: 1.4rem;
+}
+
+#movie-container p{
+  font-size: 1.1rem;
+}
+
+#movie-container img:hover{
+  transform: scale(1.05)
 }
 
 /* For practice page */
