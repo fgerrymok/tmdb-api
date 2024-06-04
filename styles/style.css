@@ -1,0 +1,204 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+* {
+  /* just for checking each spaces, margins, paddings */
+  /* border: 1px solid beige; */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+p {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+a {
+  font-size: 2rem;
+}
+/* Elements
+--------------------------------------------- */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+dl {
+}
+
+figure {
+}
+
+table {
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 7rem;
+  padding: 1rem;
+}
+
+a:visited {
+}
+
+a:hover {
+  background-color: #036635;
+}
+
+a:focus {
+}
+
+a:active {
+}
+
+.page-link {
+  display: flex;
+  margin-bottom: 10rem;
+}
+
+.page-link li {
+  width: 50%;
+  border-right: 3px solid whitesmoke;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.page-link a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.current-page {
+  background-color: #036635;
+}
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+/* Header
+--------------------------------------------- */
+body {
+  position: flex;
+  flex-direction: column;
+  background-color: #232323;
+}
+
+header {
+  position: fixed;
+  width: 20%;
+  height: 100vh;
+}
+
+/* Main
+--------------------------------------------- */
+main {
+  position: relative;
+  left: 20%;
+  width: 80%;
+  padding: 10rem 10rem 3rem 10rem;
+}
+
+section {
+  margin: 2rem 0 20rem 0;
+}
+
+#section-4,
+#practice-section {
+  margin-bottom: 5rem;
+}
+
+.demo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  margin: 1rem;
+  border: 3px solid whitesmoke;
+}
+
+/* For practice page */
+.practice-box {
+  border: 1px solid white;
+  height: 60rem;
+}
+
+/* Footer
+--------------------------------------------- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 100%;
+  background-color: #024021;
+}
+
+/* test */
+
+.current-showing {
+  color: purple;
+  background-color: #024021;
+  transition: 0.5s;
+}
