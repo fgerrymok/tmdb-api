@@ -216,6 +216,11 @@ main {
   padding: 2rem;
 }
 
+#movie-container img {
+  display: block;
+  margin: 0 auto;
+}
+
 #movie-container h3 {
   font-size: 1.4rem;
 }
