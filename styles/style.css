@@ -180,11 +180,11 @@ main {
 
 .demo-box {
   position: relative;
-  height: 44rem;
+  height: 46rem;
   z-index: 10;
   margin: 1rem 0;
   border: 3px solid whitesmoke;
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 #buttons {
@@ -224,6 +224,12 @@ main {
 
 #movie-container img:hover {
   transform: scale(1.05);
+}
+
+@media (min-width: 50em) {
+  .demo-box {
+    height: 38rem;
+  }
 }
 
 /* Footer --------------------------------------------- */
