@@ -1,43 +1,8 @@
-/*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Generic (CALLED IN ANOTHER FILE)
-	- Normalize
-	- Box sizing
-	- Media width
-# Base
-	- Typography
-	- Elements
-	- Links
-# Layouts
-# Components
-	- Header
-	- Main
-	- Footer
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-
-/* Typography
---------------------------------------------- */
-* {
-  /* just for checking each spaces, margins, paddings */
-  /* border: 1px solid beige; */
-}
+/* Typo & Elements --------------------------------------------- */
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
 }
 
 h1 {
@@ -58,6 +23,7 @@ p {
 a {
   font-size: 1rem;
 }
+
 ul {
   list-style: none;
   margin: 0;
@@ -94,57 +60,50 @@ a:hover {
   background-color: #036635;
 }
 
-/* body-main --------------------------------------------- */
+/* body --------------------------------------------- */
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #232323;
-  color: white;
 }
 
 .nav-bar {
   width: 100%;
   position: fixed;
   top: 0;
-  background-color: #232323;
+  z-index: 100;
+  background-color: black;
 }
 
-.page-link {
-  display: flex;
+.page-links {
   position: relative;
-  /* z-index: 100; */
-  background-color: #232323;
-}
-
-.page-link li {
-  width: 40%;
-  border-right: 3px solid whitesmoke;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
   border-bottom: 3px solid whitesmoke;
 }
 
-.page-link .btn-menu {
-  width: 20%;
+.page-link {
   cursor: pointer;
-  display: flex;
-  align-items: center;
 }
 
-.page-link a,
-.page-link .btn-menu {
-  justify-content: center;
+.page-link a {
+  padding: 0;
+  background-color: black;
 }
 
 .section-link {
   position: absolute;
   width: 100%;
-  top: -10rem;
+  top: -15rem;
   transition: 0.5s ease-in-out;
   background-color: black;
   opacity: 0.95;
 }
 
 .dropdown {
-  top: 3rem;
+  top: 3.3rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -158,9 +117,21 @@ main {
 }
 
 @media (min-width: 50em) {
-  header {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* page-link */
+  .nav-bar {
     width: 20%;
-    height: 100vh;
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-links {
+    border-bottom: none;
   }
 
   .page-link {
@@ -168,9 +139,25 @@ main {
     flex-direction: column;
     margin-bottom: 10rem;
   }
-  .page-link .btn-menu {
+
+  .page-link a {
+    background-color: #232323;
+  }
+
+  #btn-menu {
     display: none;
   }
+
+  /* section-link */
+
+  .section-link {
+    position: static;
+    transition: 0.5s ease-in-out;
+    background-color: #232323;
+    opacity: 0.95;
+  }
+
+  /* main */
 
   main {
     position: relative;
@@ -194,6 +181,7 @@ main {
 .demo-box {
   position: relative;
   height: 44rem;
+  z-index: 10;
   margin: 1rem 0;
   border: 3px solid whitesmoke;
   background-color: #E5E5E5;
@@ -236,15 +224,6 @@ main {
 
 #movie-container img:hover {
   transform: scale(1.05);
-}
-
-/* For practice page --------------------------------------------- */
-.practice-box {
-  position: relative;
-  height: 43rem;
-  z-index: -10;
-  margin: 1rem 0;
-  border: 3px solid whitesmoke;
 }
 
 /* Footer --------------------------------------------- */
