@@ -20,3 +20,16 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// btn-menu
+const btnMenu = document.getElementById("btn-menu");
+const sectionLink = document.getElementById("section-link");
+const mainPg = document.querySelector("main");
+
+btnMenu.addEventListener("click", () => {
+  sectionLink.classList.toggle("dropdown");
+});
+
+mainPg.addEventListener("click", () => {
+  sectionLink.classList.remove("dropdown");
+});
