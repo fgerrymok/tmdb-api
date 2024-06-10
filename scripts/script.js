@@ -1,7 +1,6 @@
 "use strict";
 
 // Grabbing some HTML elements to be used later
-const randomPopularBtn = document.getElementById("popular-btn");
 const allButtons = document.querySelectorAll(".generate-movie-btn");
 const movieContainerOut = document.getElementById("movie-container");
 
@@ -63,6 +62,7 @@ function generateRandomMovie(page) {
     .then((response) => response.json())
     // Now we need to parse the JSON data and store the pieces into some variables so that we can easily use the data.
     .then((jsonData) => {
+      console.log(jsonData);
       // movieData is a JSON object that stores a bunch of JSON objects containing information about the individual movie
       const movieData = jsonData["results"];
 
@@ -72,11 +72,7 @@ function generateRandomMovie(page) {
       // Store all the required keys from the object into variables
       const movieTitle = movieData[index]["title"];
       const posterPath = movieData[index]["poster_path"];
-      const moviePosterUrl = baseImgUrl + posterPath;
       const releaseDate = movieData[index]["release_date"];
-      const description = movieData[index]["overview"];
-      const userScore = movieData[index]["vote_average"];
-
       const newMovieObject = new movieCard(movieTitle, posterPath, releaseDate);
       newMovieObject.generatePoster();
     })
