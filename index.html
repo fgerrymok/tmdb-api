@@ -31,10 +31,12 @@
                         <a href="#section-3">What do they do?</a>
                     </li>
                     <li>
-                        <a href="#section-4">Title 4: Code Demo</a>
+                        <a href="#section-4"
+                            >Why and Where would you use them?</a
+                        >
                     </li>
                     <li>
-                        <a href="#section-5">Title 4: Code Demo</a>
+                        <a href="#section-5">Pros & Cons</a>
                     </li>
                     <li>
                         <a href="#section-6">Code Demo</a>
@@ -50,7 +52,7 @@
             <section class="section-1" id="section-1">
                 <h2>What is it/are they?</h2>
                 <p>
-                    Let’s take a look at APIs in general. The acronym
+                    Let's take a look at APIs in general. The acronym
                     <abbr title="Application Programming Interface">API</abbr>
                     stands for: <em>Application Programming Interface</em>, but
                     what does that really mean?
@@ -73,10 +75,15 @@
                     <code>querySelectorAll()</code> in JavaScript, they're using
                     an API.
                 </p>
-                <img
-                    src="./images/api-event.png"
-                    alt="An exaclidraw image visually explaining how APIs work and how they abstract functions for easier use."
-                />
+                <figure>
+                    <img
+                        src="./images/api-event.png"
+                        alt="A basic diagram that visually explains how APIs work and how they abstract functions for easier use."
+                        cite="Randy Bobandy"
+                    />
+                    <figcaption>Source: Randy Bobandy</figcaption>
+                </figure>
+
                 <p>
                     Another API constantly in use by developers is called
                     <em>Event</em>. Yup, you guessed it, every time
@@ -132,10 +139,12 @@
                         XML format).
                     </li>
                 </ol>
-                <img
-                    src="./images/api-working.png"
-                    alt="A very basic diagram of how APIs work/communicate between the the browser, internet, and hosted server."
-                />
+                <figure>
+                    <img
+                        src="./images/api-working.png"
+                        alt="A very basic diagram of how APIs work/communicate between the the browser, internet, and hosted server."
+                    />
+                </figure>
                 <p>
                     Rules? What rules? How do we know what those rules are?
                     Those rules will (hopefully) be explained in the specific
@@ -194,31 +203,136 @@
                     <em>Endpoints</em> are simply URLs that can be used to send
                     requests to an API.
                 </p>
-                <p>
-                    If you want to learn more about the other API protocols or
-                    HTTP methods, the following two links are very helpful:
-                    <a
-                        href="https://apidog.com/blog/8-api-protocol-types/"
-                        target="_blank"
-                        >API Protocols</a
-                    >
-                    <a
-                        href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
-                        target="_blank"
-                        >HTTP Methods</a
-                    >
-                </p>
+                <aside>
+                    <p>
+                        If you want to learn more about the other API protocols
+                        or HTTP methods, the following two links are very
+                        helpful:
+                        <a
+                            href="https://apidog.com/blog/8-api-protocol-types/"
+                            target="_blank"
+                            >API Protocols</a
+                        >
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+                            target="_blank"
+                            >HTTP Methods</a
+                        >
+                    </p>
+                </aside>
             </section>
 
             <section class="section-3" id="section-3">
                 <h2>What do they do?</h2>
+                <p>
+                    Once the API receives a valid request it will run a function
+                    (or more likely multiple functions depending on how complex
+                    the API is) and return whatever was requested, usually in a
+                    <abbr title="JavaScript Object Notation">JSON</abbr> file.
+                </p>
+                <figure>
+                    <img
+                        src="./images/api-cat.png"
+                        alt="A basic diagram showing how an API works when called from a browser to show different cat images."
+                    />
+                    <figcaption>Source: Randy Bobandy</figcaption>
+                </figure>
+                <p>
+                    This could be as simple as a single image or something more
+                    complex like a video. If we take the TMDB API as an example,
+                    we'll be requesting different resources from a database of
+                    movie data (like images, ratings info, release dates, etc.).
+                    Since the data in the APIs response is in a
+                    <abbr title="JavaScript Object Notation">JSON</abbr> file,
+                    we will need to parse it using <code>.then</code> as part of
+                    our <code>fetch()</code>.
+                </p>
+                <p>
+                    Remember, the API will only return the data that was
+                    requested. It is up to the developer to properly
+                    handle/parse the response and display the results.
+                </p>
             </section>
 
-            <section class="section-4" id="section-4"></section>
+            <section class="section-4" id="section-4">
+                <h2>Why and Where Would you use them?</h2>
+                <p>
+                    From a development perspective there are several reasons
+                    where and why you would use APIs. Arguably the two biggest
+                    are:
+                </p>
+                <dl>
+                    <dt>Functionality</dt>
+                    <dd>
+                        You can use them to provide access to certain features
+                        and functions that would be difficult to build yourself.
+                    </dd>
+                    <dt>Speed</dt>
+                    <dd>You can use them to reduce development time.</dd>
+                </dl>
+                <p>
+                    Utilizing existing APIs is a good way to use existing
+                    resources compared to having to build them from
+                    scratch.Because of this you can offer a variety of
+                    connectivity to local weather forecasts, traffic updates,
+                    social media, nearly anything.
+                </p>
+                <p>
+                    A real world example (which may sound familiar) that
+                    highlights both of these reasons is if someone wanted a
+                    website that included a selection of changing cat images.
+                    One option is implementing this ourselves.
+                </p>
+                <p>
+                    That would entail spending time scouring the web trying to
+                    find as many copyright free images of cats as possible,
+                    building the database, filling it with those images, paying
+                    to host it on a server, and every other step in between.
+                </p>
+                <p>
+                    <em>Or</em>, we could choose the second option: we use the
+                    web API that's already built to do just that.
+                </p>
+                <h3>Other real-word examples of using APIs:</h3>
+                <dl>
+                    <dt>An e-Commerce Site</dt>
+                    <dd>
+                        It needs a secure way for customers to pay as well as
+                        being able to ship/track their orders. You could code
+                        those from scratch or use existing APIs like the ones
+                        available from Paypal and Fed Ex.
+                    </dd>
 
-            <section class="section-5" id="section-5"></section>
+                    <dt>A Fantasy Football League</dt>
+                    <dd>
+                        Participants want to be change their roster, to look at
+                        players stats, and any sport specific news stories, all
+                        of which updates in real-time. There are APIs for that.
+                    </dd>
 
-            <section id="section-6">
+                    <dt>Movie Database</dt>
+                    <dd>
+                        You need to create a movie database using an API for a
+                        school project... hint hint.
+                    </dd>
+                </dl>
+                <p>
+                    As it's plain to see, there are a variety of reasons where
+                    and why individuals would want to use one or more web APIs.
+                    If we come back to the quote from section 1:
+                    <q
+                        >code that's already been written by other developers,
+                        designed to make our jobs easier</q
+                    >
+                    the amount of use cases becomes nearly infinite.
+                </p>
+            </section>
+
+            <section class="section-5" id="section-5">
+                <h2>Pros & Cons</h2>
+            </section>
+
+            <section class="section-6" id="section-6">
                 <h2>Code Demo</h2>
                 <!-- API DEMO inside of this article -->
                 <article class="demo-box">
