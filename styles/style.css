@@ -193,10 +193,10 @@ main {
 
 .demo-box {
   position: relative;
-  height: 43rem;
-  /* z-index: -10; */
+  height: 44rem;
   margin: 1rem 0;
   border: 3px solid whitesmoke;
+  background-color: #E5E5E5;
 }
 
 #buttons {
@@ -212,21 +212,26 @@ main {
 
 #movie-container {
   width: fit-content;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem;
 }
 
 #movie-container img {
   display: block;
   margin: 0 auto;
+  border-radius: 1rem;
 }
 
 #movie-container h3 {
   font-size: 1.4rem;
+  margin-bottom: 0;
+  color: black;
 }
 
 #movie-container p {
   font-size: 1.1rem;
+  margin-top: 0;
+  color: black;
 }
 
 #movie-container img:hover {
