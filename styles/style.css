@@ -1,0 +1,264 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+* {
+  /* just for checking each spaces, margins, paddings */
+  /* border: 1px solid beige; */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  padding-top: 5rem;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  font-size: 1rem;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+button {
+  padding: 2rem;
+}
+
+/* Links --------------------------------------------- */
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 1rem;
+}
+
+a:hover {
+  background-color: #036635;
+}
+
+/* body-main --------------------------------------------- */
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #232323;
+  color: white;
+}
+
+.nav-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #232323;
+}
+
+.page-link {
+  display: flex;
+  position: relative;
+  /* z-index: 100; */
+  background-color: #232323;
+}
+
+.page-link li {
+  width: 40%;
+  border-right: 3px solid whitesmoke;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.page-link .btn-menu {
+  width: 20%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.page-link a,
+.page-link .btn-menu {
+  justify-content: center;
+}
+
+.section-link {
+  position: absolute;
+  width: 100%;
+  top: -10rem;
+  transition: 0.5s ease-in-out;
+  background-color: black;
+  opacity: 0.95;
+}
+
+.dropdown {
+  top: 3rem;
+  transition: 0.5s ease-in-out;
+}
+
+.current-page {
+  background-color: #036635;
+}
+
+main {
+  padding: 1rem;
+  padding-top: 7rem;
+}
+
+@media (min-width: 50em) {
+  header {
+    width: 20%;
+    height: 100vh;
+  }
+
+  .page-link {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+  }
+  .page-link .btn-menu {
+    display: none;
+  }
+
+  main {
+    position: relative;
+    left: 20%;
+    width: 80%;
+    padding: 10rem 10rem 3rem 10rem;
+  }
+
+  section {
+    margin: 2rem 0 20rem 0;
+  }
+
+  #section-4,
+  #practice-section {
+    margin-bottom: 5rem;
+  }
+}
+
+/* Code Demo Section */
+
+.demo-box {
+  position: relative;
+  height: 43rem;
+  /* z-index: -10; */
+  margin: 1rem 0;
+  border: 3px solid whitesmoke;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+}
+
+#buttons button {
+  width: 50%;
+}
+
+#movie-container {
+  width: fit-content;
+  margin: auto;
+  padding: 2rem;
+}
+
+#movie-container h3 {
+  font-size: 1.4rem;
+}
+
+#movie-container p {
+  font-size: 1.1rem;
+}
+
+#movie-container img:hover {
+  transform: scale(1.05);
+}
+
+/* For practice page --------------------------------------------- */
+.practice-box {
+  position: relative;
+  height: 43rem;
+  z-index: -10;
+  margin: 1rem 0;
+  border: 3px solid whitesmoke;
+}
+
+/* Footer --------------------------------------------- */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 5rem;
+  width: 100%;
+  background-color: #024021;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 50em) {
+  footer {
+    height: 5rem;
+    font-size: 1rem;
+  }
+}
+
+/* test */
+
+.current-showing {
+  background-color: #024021;
+  transition: 0.5s;
+}
