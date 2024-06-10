@@ -28,10 +28,19 @@
                         <a href="#section-2">How do they work?</a>
                     </li>
                     <li>
-                        <a href="#section-3">Title 3</a>
+                        <a href="#section-3">What do they do?</a>
                     </li>
                     <li>
                         <a href="#section-4">Title 4: Code Demo</a>
+                    </li>
+                    <li>
+                        <a href="#section-5">Title 4: Code Demo</a>
+                    </li>
+                    <li>
+                        <a href="#section-6">Code Demo</a>
+                    </li>
+                    <li>
+                        <a href="#section-7">Sources & References</a>
                     </li>
                 </ul>
             </nav>
@@ -138,16 +147,72 @@
                     The protocol an API uses specifies how it connects to the
                     internet, how other parties connect to it, and how it
                     receives and transmits information. There are several API
-                    protocols in use today: <abbr title=""></abbr>REST, SOAP,
-                    RPC, GraphQL, to name a few. That being said, the REST or
-                    RESTful (Representational State Transfer) protocol (which
-                    technically isn't an actual protocol but a set of
-                    guidelines) is the most widely used for Web APIs today.
-                    Because of this it's the one we're going to focus on.
+                    protocols in use today:
+                    <abbr title="Representational State Transfer">REST</abbr>,
+                    <abbr title="Simple Object Access">SOAP</abbr>,
+                    <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL,
+                    to name a few. That being said, the REST or
+                    <em>Representational State Transfer</em> protocol (which
+                    technically isn't a protocol at all but a set of guidelines)
+                    is the most widely used for Web APIs today. Because of this
+                    it's the one we're going to focus on.
+                </p>
+                <p>
+                    The
+                    <abbr title="Representational State Transfer">REST</abbr>
+                    protocol works by using
+                    <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s
+                    built in methods: <code>GET</code>, <code>POST</code>,
+                    <code>PUT</code>, and/or <code>DELETE</code> which (with a
+                    valid API key) connect to the API's server using specific
+                    URLs known as <em>Endpoints</em>.
+                </p>
+                <h3>What are these HTTP Methods?</h3>
+                <p>
+                    HTTP or <em>Hypertext Transfer Protocol</em> is the
+                    foundation of how everything communicates over the internet.
+                    There are nine HTTP methods that can be used, however the
+                    four main ones that are utilized to communicate with web
+                    APIs are <code>GET</code>, <code>POST</code>,
+                    <code>PUT</code>, and/or <code>DELETE</code>.
+                </p>
+
+                <p>
+                    <code>GET</code> is the HTTP method used to make requests to
+                    a server (whereas <code>POST</code>, <code>PUT</code>,
+                    and/or <code>DELETE</code> are used to submit, create, or
+                    delete resources on that server).
+                </p>
+                <p>
+                    Since (most) public web APIs only allow
+                    <code>GET</code> requests and because <code>GET</code> is
+                    also the HTTP method being called when we use
+                    <code>fetch()</code> in JavaScript it's what we'll be
+                    focusing on.
+                </p>
+                <p>
+                    <em>Endpoints</em> are simply URLs that can be used to send
+                    requests to an API.
+                </p>
+                <p>
+                    If you want to learn more about the other API protocols or
+                    HTTP methods, the following two links are very helpful:
+                    <a
+                        href="https://apidog.com/blog/8-api-protocol-types/"
+                        target="_blank"
+                        >API Protocols</a
+                    >
+                    <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+                        target="_blank"
+                        >HTTP Methods</a
+                    >
                 </p>
             </section>
 
-            <section class="section-3" id="section-3"></section>
+            <section class="section-3" id="section-3">
+                <h2>What do they do?</h2>
+            </section>
 
             <section class="section-4" id="section-4"></section>
 
