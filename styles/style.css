@@ -1,3 +1,45 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Layouts
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+* {
+  /* just for checking each spaces, margins, paddings */
+  /* border: 1px solid beige; */
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
+
 h1 {
   font-size: 3rem;
   margin: 0;
@@ -16,7 +58,6 @@ p {
 a {
   font-size: 1rem;
 }
-
 ul {
   list-style: none;
   margin: 0;
