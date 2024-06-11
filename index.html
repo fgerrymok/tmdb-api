@@ -50,7 +50,7 @@
         <main>
             <h1 id="home">Web APIs - What are they??</h1>
             <section class="section-1" id="section-1">
-                <h2>What is it/are they?</h2>
+                <h2>What are they?</h2>
                 <p>
                     Let's take a look at APIs in general. The acronym
                     <abbr title="Application Programming Interface">API</abbr>
@@ -66,10 +66,11 @@
                     <cite>Randy Bobandy</cite>
                 </blockquote>
                 <p>
-                    One API web developers use constantly (to repeat another
-                    thing that professor has said) is the
+                    APIs can be located locally, or online. One local API web
+                    developers use constantly (to repeat another thing that
+                    professor has said) is the
                     <abbr title="Document Object Model">DOM</abbr> or
-                    <em>document object model</em>. So, whenever anyone uses
+                    <em>document object model</em>. So, whenever somebody uses
                     <code>document.getElementByID()</code>,
                     <code>querySelector()</code>, or
                     <code>querySelectorAll()</code> in JavaScript, they're using
@@ -233,19 +234,19 @@
                 </p>
                 <ul>
                     <li>
-                        <em>Method:</em> The HTTP method used to make the
-                        request, <code>GET</code> in our case.
+                        <b>Method:</b> The HTTP method used to make the request,
+                        <code>GET</code> in our case.
                     </li>
                     <li>
-                        <em>URL/Endpoint:</em> The address of the API web server
+                        <b>URL/Endpoint:</b> The address of the API web server
                         that you're requesting data from.
                     </li>
                     <li>
-                        <em>Parameters:</em> The data that defines what we're
-                        looking in our API request.
+                        <b>Parameters:</b> The data that defines what we're
+                        looking for in our API request.
                     </li>
                     <li>
-                        <em>Headers:</em> Generally contains an API Key to
+                        <b>Headers:</b> Generally contains an API Key to
                         authenticate the request as well as specifies the format
                         of the data being requested.
                     </li>
@@ -254,29 +255,41 @@
                 <p>The response is also made up of four parts:</p>
                 <ul>
                     <li>
-                        <em>Response code:</em> The HTTP status code that is
-                        returned by the API which let's us know if the request
-                        was successful or not. This code can be found in the
-                        devtools (if you remember our API class with Randy), the
-                        most common are 200 (OK), 404 (Not Found), and 500
+                        <b>Response Status code:</b> The HTTP status code that
+                        is returned by the API which let's us know if the
+                        request was successful or not. This code can be found in
+                        the devtools (if you remember our API class with Randy),
+                        the most common are 200 (OK), 404 (Not Found), and 500
                         (Internal Server Error).
                     </li>
                     <li>
-                        <em>Data:</em> The data that is returned by the API
-                        (usually in JSON but sometimes in XML format).
+                        <b>Data:</b> The data that is returned by the API
+                        (usually in
+                        <abbr title="JavaScript Object Notation">JSON</abbr>
+                        sometimes in
+                        <abbr title="Extensible Markup Language">XML</abbr>
+                        format).
                     </li>
                     <li>
-                        <em>Headers:</em> Used to specify the format of the data
+                        <b>Headers:</b> Used to specify the format of the data
                         being returned (which hopefully matches the type
                         specified in the request).
                     </li>
                     <li>
-                        <em>Links:</em> Provides more detail about the data,
-                        often including links to source, etc.
+                        <b>Links:</b> Provides more detail about the data, often
+                        including links to source, etc.
                     </li>
                 </ul>
 
-                <p></p>
+                <p>
+                    There are several types of parameters used in REST APIs, the
+                    most common and the one we'll be using is known as a
+                    <em>query string</em>. You've likely seen them in the
+                    browser's address bar, most likely after looking for
+                    something from a search engine like Google.
+                </p>
+                <p>You can see them in the qerr</p>
+
                 <p>
                     Once the API receives a valid request it will run a function
                     (or more likely multiple functions depending on how complex
