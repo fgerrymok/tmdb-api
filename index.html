@@ -19,7 +19,7 @@
         </ul>
         <ul id="section-link" class="section-link">
           <li>
-            <a href="#section-1">What is it?</a>
+            <a href="#section-1">What are they?</a>
           </li>
           <li>
             <a href="#section-2">How do they work?</a>
@@ -109,7 +109,7 @@
         <h2>How do they work??</h2>
         <p>
           Web APIs are like a bridge between your code and the resources on a
-          server that you’re trying to access, whether it be a data source, an
+          server that you're trying to access, whether it be a data source, an
           application, or anything in between.
         </p>
         <p>
@@ -191,18 +191,23 @@
           <p>
             If you want to learn more about the other API protocols or HTTP
             methods, the following two links are very helpful:
-            <a
+            <nav>
+              <ul>
+          <li><a
               href="https://apidog.com/blog/8-api-protocol-types/"
               target="_blank"
               rel="noopener noreferrer"
               >API Protocols</a
-            >
-            <a
+          ></li>
+          <li><a
               href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
               target="_blank"
               rel="noopener noreferrer"
               >HTTP Methods</a
-            >
+          ></li>
+      </ul>
+      </nav>
+
           </p>
         </aside>
       </section>
@@ -210,11 +215,101 @@
       <section class="section-3" id="section-3">
         <h2>What do they do?</h2>
         <p>
-          Once the API receives a valid request it will run a function (or more
-          likely multiple functions depending on how complex the API is) and
-          return whatever was requested, usually in a
-          <abbr title="JavaScript Object Notation">JSON</abbr> file.
-        </p>
+          When you send a request to an API it's (generally) made up
+          of 4 parts:
+      </p>
+      <ul>
+          <li>
+              <b>Method:</b> The HTTP method used to make the request,
+              <code>GET</code> in our case.
+          </li>
+          <li>
+              <b>URL/Endpoint:</b> The address of the API web server
+              that you're requesting data from.
+          </li>
+          <li>
+              <b>Parameters:</b> The data that defines what we're
+              looking for in our API request.
+          </li>
+          <li>
+              <b>Headers:</b> Generally contains an API Key to
+              authenticate the request as well as specifies the format
+              of the data being requested.
+          </li>
+      </ul>
+
+      <p>The response is also made up of four parts:</p>
+      <ul>
+          <li>
+              <b>Response Status code:</b> The HTTP status code that
+              is returned by the API which let's us know if the
+              request was successful or not. This code can be found in
+              the devtools (if you remember our API class with Randy),
+              the most common are 200 (OK), 404 (Not Found), and 500
+              (Internal Server Error).
+          </li>
+          <li>
+              <b>Data:</b> The data that is returned by the API
+              (usually in
+              <abbr title="JavaScript Object Notation">JSON</abbr>
+              sometimes in
+              <abbr title="Extensible Markup Language">XML</abbr>
+              format).
+          </li>
+          <li>
+              <b>Headers:</b> Used to specify the format of the data
+              being returned (which hopefully matches the type
+              specified in the request).
+          </li>
+          <li>
+              <b>Links:</b> Provides more detail about the data, often
+              including links to source, etc.
+          </li>
+      </ul>
+
+      <p>
+          There are several types of parameters used in REST APIs, the
+          most common and the one we'll be using is known as a
+          <em>query string</em>. You've likely seen them in the
+          browser's address bar, most likely after looking for
+          something from a search engine like Google.
+      </p>
+      <p>
+          You can see them in the query string at the end of a URL or
+          Endpoint, after the <code>?</code> character.
+      </p>
+      <p>
+          For example:
+          <code
+              >https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1</code
+          >, the query string parameters are the
+          <code>language=us</code> and the <code></code>page=1
+      </p>
+      <p>
+          In the headers is where you will specify the format of the
+          data you are requesting from the API, more often than not a
+          JSON file, as well as authenticating your request by
+          including your API key.
+      </p>
+      <p>
+          For example, your code may look something like this: <br />
+          <code
+              >headers: {<br />
+              accept: "json",<br />
+              Authorization: "APIKEY", <br />
+              }</code
+          >
+          <br />
+          As you can see they're accepting json file format and
+          authorizing with their API key.
+      </p>
+
+      <p>
+          Once the API receives a valid request it will run a function
+          (or more likely multiple functions depending on how complex
+          the API is) and return whatever was requested.
+      </p>
+
         <figure>
           <img
             src="./images/api-cat.png"
@@ -485,6 +580,14 @@
                 >The Movie Database - API Intro</a
               >
             </li>
+            <li>
+              <a
+                  href="https://github.com/public-apis/public-apis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub - Public API Database</a
+              >
+          </li>
           </ul>
         </nav>
         <p>
