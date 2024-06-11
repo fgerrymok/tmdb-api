@@ -288,13 +288,40 @@
                     browser's address bar, most likely after looking for
                     something from a search engine like Google.
                 </p>
-                <p>You can see them in the qerr</p>
+                <p>
+                    You can see them in the query string at the end of a URL or
+                    Endpoint, after the <code>?</code> character.
+                </p>
+                <p>
+                    For example:
+                    <code
+                        >https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1</code
+                    >, the query string parameters are the
+                    <code>language=us</code> and the <code></code>page=1
+                </p>
+                <p>
+                    In the headers is where you will specify the format of the
+                    data you are requesting from the API, more often than not a
+                    JSON file, as well as authenticating your request by
+                    including your API key.
+                </p>
+                <p>
+                    For example, your code may look something like this: <br />
+                    <code
+                        >headers: {<br />
+                        accept: "json",<br />
+                        Authorization: "APIKEY", <br />
+                        }</code
+                    >
+                    <br />
+                    As you can see they're accepting json file format and
+                    authorizing with their API key.
+                </p>
 
                 <p>
                     Once the API receives a valid request it will run a function
                     (or more likely multiple functions depending on how complex
-                    the API is) and return whatever was requested, usually in a
-                    <abbr title="JavaScript Object Notation">JSON</abbr> file.
+                    the API is) and return whatever was requested.
                 </p>
                 <p></p>
                 <figure>
