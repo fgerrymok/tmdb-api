@@ -1,512 +1,501 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles/normalize-fwd.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <script defer src="scripts/script-style.js"></script>
-        <script defer src="scripts/script.js"></script>
-        <title>TMDB API</title>
-    </head>
-    <body id="home">
-        <header>
-            <nav id="nav-bar" class="nav-bar">
-                <ul>
-                    <div class="page-link">
-                        <li>
-                            <a href="index.html" class="current-page">HOME</a>
-                        </li>
-                        <li>
-                            <a href="practice.html">PRACTICE</a>
-                        </li>
-                    </div>
-                    <li>
-                        <a href="#section-1">What is it?</a>
-                    </li>
-                    <li>
-                        <a href="#section-2">How do they work?</a>
-                    </li>
-                    <li>
-                        <a href="#section-3">What do they do?</a>
-                    </li>
-                    <li>
-                        <a href="#section-4"
-                            >Why and Where would you use them?</a
-                        >
-                    </li>
-                    <li>
-                        <a href="#section-5">Pros & Cons</a>
-                    </li>
-                    <li>
-                        <a href="#section-6">Code Demo</a>
-                    </li>
-                    <li>
-                        <a href="#section-7">Sources & References</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1 id="home">Web APIs - What are they??</h1>
-            <section class="section-1" id="section-1">
-                <h2>What is it/are they?</h2>
-                <p>
-                    Let's take a look at APIs in general. The acronym
-                    <abbr title="Application Programming Interface">API</abbr>
-                    stands for: <em>Application Programming Interface</em>, but
-                    what does that really mean?
-                </p>
-                <p>It's been described by a certain professor as:</p>
-                <blockquote>
-                    <p>
-                        "code that's already been written by other developers,
-                        designed to make our jobs easier"
-                    </p>
-                    <cite>Randy Bobandy</cite>
-                </blockquote>
-                <p>
-                    One API web developers use constantly (to repeat another
-                    thing that professor has said) is the
-                    <abbr title="Document Object Model">DOM</abbr> or
-                    <em>document object model</em>. So, whenever anyone uses
-                    <code>document.getElementByID()</code>,
-                    <code>querySelector()</code>, or
-                    <code>querySelectorAll()</code> in JavaScript, they're using
-                    an API.
-                </p>
-                <figure>
-                    <img
-                        src="./images/api-event.png"
-                        alt="A basic diagram that visually explains how APIs work and how they abstract functions for easier use."
-                        cite="Randy Bobandy"
-                    />
-                    <figcaption>Source: Randy Bobandy</figcaption>
-                </figure>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize-fwd.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="scripts/script-style.js"></script>
+    <script defer src="scripts/script.js"></script>
+    <title>Web API</title>
+  </head>
+  <body id="home">
+    <a class="screen-reader-text" href="#site-main">Skip to content</a>
+    <header>
+      <nav id="nav-bar" class="nav-bar">
+        <ul class="page-links">
+          <li id="logo" class="page-link logo"><a href="#">Web APIs</a></li>
+          <li id="btn-menu" class="page-link btn-menu">☰</li>
+        </ul>
+        <ul id="section-link" class="section-link">
+          <li>
+            <a href="#section-1">What is it?</a>
+          </li>
+          <li>
+            <a href="#section-2">How do they work?</a>
+          </li>
+          <li>
+            <a href="#section-3">What do they do?</a>
+          </li>
+          <li>
+            <a href="#section-4">Why and Where would you use them?</a>
+          </li>
+          <li>
+            <a href="#section-5">Pros & Cons</a>
+          </li>
+          <li>
+            <a href="#section-6">Code Demo</a>
+          </li>
+          <li>
+            <a href="#section-7">Sources & References</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="site-main">
+      <h1 id="home">Web APIs - What are they??</h1>
+      <section class="section-1" id="section-1">
+        <h2>What is it/are they?</h2>
+        <p>
+          Let's take a look at APIs in general. The acronym
+          <abbr title="Application Programming Interface">API</abbr>
+          stands for: <em>Application Programming Interface</em>, but what does
+          that really mean?
+        </p>
+        <p>It's been described by a certain professor as:</p>
+        <blockquote>
+          <p>
+            "code that's already been written by other developers, designed to
+            make our jobs easier"
+          </p>
+          <cite>Randy Bobandy</cite>
+        </blockquote>
+        <p>
+          One API web developers use constantly (to repeat another thing that
+          professor has said) is the
+          <abbr title="Document Object Model">DOM</abbr> or
+          <em>document object model</em>. So, whenever anyone uses
+          <code>document.getElementByID()</code>, <code>querySelector()</code>,
+          or <code>querySelectorAll()</code> in JavaScript, they're using an
+          API.
+        </p>
+        <figure>
+          <img
+            src="./images/api-event.png"
+            alt="A basic diagram that visually explains how APIs work and how they abstract functions for easier use."
+            cite="Randy Bobandy"
+          />
+          <figcaption>Source: Randy Bobandy</figcaption>
+        </figure>
 
-                <p>
-                    Another API constantly in use by developers is called
-                    <em>Event</em>. Yup, you guessed it, every time
-                    <code>.addEventListener</code> is used it's using the Event
-                    API.
-                </p>
-                <p>
-                    Both the <abbr title="document object model">DOM</abbr> and
-                    event are great representations of
-                    <q
-                        >code that's already been written that makes our lives
-                        easier</q
-                    >. I don't know about you guys but at this point in my
-                    learning if I had to figure out all of the code needed to
-                    achieve the same thing I would be in trouble.
-                </p>
-                <p>
-                    Regarding Web APIs specifically, the technical definition is
-                    “an API that can be accessed using the HTTP protocol”. Super
-                    helpful, right? It simply means an API that can be used and
-                    accessed over the internet.
-                </p>
-                <p>
-                    Therefore, a web API is a block of code that has been
-                    written by somebody else that makes our lives easier which
-                    can be accessed over the internet. Some are free to use
-                    while others require payment, almost all require users to
-                    sign up for an API key.
-                </p>
-            </section>
+        <p>
+          Another API constantly in use by developers is called
+          <em>Event</em>. Yup, you guessed it, every time
+          <code>.addEventListener</code> is used it's using the Event API.
+        </p>
+        <p>
+          Both the <abbr title="document object model">DOM</abbr> and event are
+          great representations of
+          <q>code that's already been written that makes our lives easier</q>. I
+          don't know about you guys but at this point in my learning if I had to
+          figure out all of the code needed to achieve the same thing I would be
+          in trouble.
+        </p>
+        <p>
+          Regarding Web APIs specifically, the technical definition is “an API
+          that can be accessed using the HTTP protocol”. Super helpful, right?
+          It simply means an API that can be used and accessed over the
+          internet.
+        </p>
+        <p>
+          Therefore, a web API is a block of code that has been written by
+          somebody else that makes our lives easier which can be accessed over
+          the internet. Some are free to use while others require payment,
+          almost all require users to sign up for an API key.
+        </p>
+      </section>
 
-            <section class="section-2" id="section-2">
-                <h2>How do they work??</h2>
-                <p>
-                    Web APIs are like a bridge between your code and the
-                    resources on a server that you’re trying to access, whether
-                    it be a data source, an application, or anything in between.
-                </p>
-                <p>
-                    Most web APIs (free or paid) require their users to register
-                    for an account and API key to be able to use their
-                    services/resources.
-                </p>
-                <ol>
-                    <li>
-                        Sets rules you need to follow for interacting with it
-                        (including authenticating the user via API key).
-                    </li>
-                    <li>
-                        Manage the data transfer that happens between the code
-                        (like your website) making the request and the server
-                        that sends a response (often in JSON and less often in
-                        XML format).
-                    </li>
-                </ol>
-                <figure>
-                    <img
-                        src="./images/api-working.png"
-                        alt="A very basic diagram of how APIs work/communicate between the the browser, internet, and hosted server."
-                    />
-                </figure>
-                <p>
-                    Rules? What rules? How do we know what those rules are?
-                    Those rules will (hopefully) be explained in the specific
-                    APIs documentation. Another thing that will be explained is
-                    the specific <em>protocol</em> the API is using.
-                </p>
+      <section class="section-2" id="section-2">
+        <h2>How do they work??</h2>
+        <p>
+          Web APIs are like a bridge between your code and the resources on a
+          server that you’re trying to access, whether it be a data source, an
+          application, or anything in between.
+        </p>
+        <p>
+          Most web APIs (free or paid) require their users to register for an
+          account and API key to be able to use their services/resources.
+        </p>
+        <ol>
+          <li>
+            Sets rules you need to follow for interacting with it (including
+            authenticating the user via API key).
+          </li>
+          <li>
+            Manage the data transfer that happens between the code (like your
+            website) making the request and the server that sends a response
+            (often in JSON and less often in XML format).
+          </li>
+        </ol>
+        <figure>
+          <img
+            src="./images/api-working.png"
+            alt="A very basic diagram of how APIs work/communicate between the the browser, internet, and hosted server."
+          />
+        </figure>
+        <p>
+          Rules? What rules? How do we know what those rules are? Those rules
+          will (hopefully) be explained in the specific APIs documentation.
+          Another thing that will be explained is the specific
+          <em>protocol</em> the API is using.
+        </p>
 
-                <p>
-                    The protocol an API uses specifies how it connects to the
-                    internet, how other parties connect to it, and how it
-                    receives and transmits information. There are several API
-                    protocols in use today:
-                    <abbr title="Representational State Transfer">REST</abbr>,
-                    <abbr title="Simple Object Access">SOAP</abbr>,
-                    <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL,
-                    to name a few. That being said, the REST or
-                    <em>Representational State Transfer</em> protocol (which
-                    technically isn't a protocol at all but a set of guidelines)
-                    is the most widely used for Web APIs today. Because of this
-                    it's the one we're going to focus on.
-                </p>
-                <p>
-                    The
-                    <abbr title="Representational State Transfer">REST</abbr>
-                    protocol works by using
-                    <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s
-                    built in methods: <code>GET</code>, <code>POST</code>,
-                    <code>PUT</code>, and/or <code>DELETE</code> which (with a
-                    valid API key) connect to the API's server using specific
-                    URLs known as <em>Endpoints</em>.
-                </p>
-                <h3>What are these HTTP Methods?</h3>
-                <p>
-                    HTTP or <em>Hypertext Transfer Protocol</em> is the
-                    foundation of how everything communicates over the internet.
-                    There are nine HTTP methods that can be used, however the
-                    four main ones that are utilized to communicate with web
-                    APIs are <code>GET</code>, <code>POST</code>,
-                    <code>PUT</code>, and/or <code>DELETE</code>.
-                </p>
+        <p>
+          The protocol an API uses specifies how it connects to the internet,
+          how other parties connect to it, and how it receives and transmits
+          information. There are several API protocols in use today:
+          <abbr title="Representational State Transfer">REST</abbr>,
+          <abbr title="Simple Object Access">SOAP</abbr>,
+          <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL, to name a
+          few. That being said, the REST or
+          <em>Representational State Transfer</em> protocol (which technically
+          isn't a protocol at all but a set of guidelines) is the most widely
+          used for Web APIs today. Because of this it's the one we're going to
+          focus on.
+        </p>
+        <p>
+          The
+          <abbr title="Representational State Transfer">REST</abbr>
+          protocol works by using
+          <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s built in
+          methods: <code>GET</code>, <code>POST</code>, <code>PUT</code>, and/or
+          <code>DELETE</code> which (with a valid API key) connect to the API's
+          server using specific URLs known as <em>Endpoints</em>.
+        </p>
+        <h3>What are these HTTP Methods?</h3>
+        <p>
+          HTTP or <em>Hypertext Transfer Protocol</em> is the foundation of how
+          everything communicates over the internet. There are nine HTTP methods
+          that can be used, however the four main ones that are utilized to
+          communicate with web APIs are <code>GET</code>, <code>POST</code>,
+          <code>PUT</code>, and/or <code>DELETE</code>.
+        </p>
 
-                <p>
-                    <code>GET</code> is the HTTP method used to make requests to
-                    a server (whereas <code>POST</code>, <code>PUT</code>,
-                    and/or <code>DELETE</code> are used to submit, create, or
-                    delete resources on that server).
-                </p>
-                <p>
-                    Since (most) public web APIs only allow
-                    <code>GET</code> requests and because <code>GET</code> is
-                    also the HTTP method being called when we use
-                    <code>fetch()</code> in JavaScript it's what we'll be
-                    focusing on.
-                </p>
-                <p>
-                    <em>Endpoints</em> are simply URLs that can be used to send
-                    requests to an API.
-                </p>
-                <aside>
-                    <p>
-                        If you want to learn more about the other API protocols
-                        or HTTP methods, the following two links are very
-                        helpful:
-                        <a
-                            href="https://apidog.com/blog/8-api-protocol-types/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >API Protocols</a
-                        >
-                        <a
-                            href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            >HTTP Methods</a
-                        >
-                    </p>
-                </aside>
-            </section>
+        <p>
+          <code>GET</code> is the HTTP method used to make requests to a server
+          (whereas <code>POST</code>, <code>PUT</code>, and/or
+          <code>DELETE</code> are used to submit, create, or delete resources on
+          that server).
+        </p>
+        <p>
+          Since (most) public web APIs only allow
+          <code>GET</code> requests and because <code>GET</code> is also the
+          HTTP method being called when we use <code>fetch()</code> in
+          JavaScript it's what we'll be focusing on.
+        </p>
+        <p>
+          <em>Endpoints</em> are simply URLs that can be used to send requests
+          to an API.
+        </p>
+        <aside>
+          <p>
+            If you want to learn more about the other API protocols or HTTP
+            methods, the following two links are very helpful:
+            <a
+              href="https://apidog.com/blog/8-api-protocol-types/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >API Protocols</a
+            >
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HTTP Methods</a
+            >
+          </p>
+        </aside>
+      </section>
 
-            <section class="section-3" id="section-3">
-                <h2>What do they do?</h2>
-                <p>
-                    Once the API receives a valid request it will run a function
-                    (or more likely multiple functions depending on how complex
-                    the API is) and return whatever was requested, usually in a
-                    <abbr title="JavaScript Object Notation">JSON</abbr> file.
-                </p>
-                <figure>
-                    <img
-                        src="./images/api-cat.png"
-                        alt="A basic diagram showing how an API works when called from a browser to show different cat images."
-                    />
-                    <figcaption>Source: Randy Bobandy</figcaption>
-                </figure>
-                <p>
-                    This could be as simple as a single image or something more
-                    complex like a video. If we take the TMDB API as an example,
-                    we'll be requesting different resources from a database of
-                    movie data (like images, ratings info, release dates, etc.).
-                    Since the data in the APIs response is in a
-                    <abbr title="JavaScript Object Notation">JSON</abbr> file,
-                    we will need to parse it using <code>.then</code> as part of
-                    our <code>fetch()</code>.
-                </p>
-                <p>
-                    Remember, the API will only return the data that was
-                    requested. It is up to the developer to properly
-                    handle/parse the response and display the results.
-                </p>
-            </section>
+      <section class="section-3" id="section-3">
+        <h2>What do they do?</h2>
+        <p>
+          Once the API receives a valid request it will run a function (or more
+          likely multiple functions depending on how complex the API is) and
+          return whatever was requested, usually in a
+          <abbr title="JavaScript Object Notation">JSON</abbr> file.
+        </p>
+        <figure>
+          <img
+            src="./images/api-cat.png"
+            alt="A basic diagram showing how an API works when called from a browser to show different cat images."
+          />
+          <figcaption>Source: Randy Bobandy</figcaption>
+        </figure>
+        <p>
+          This could be as simple as a single image or something more complex
+          like a video. If we take the TMDB API as an example, we'll be
+          requesting different resources from a database of movie data (like
+          images, ratings info, release dates, etc.). Since the data in the APIs
+          response is in a
+          <abbr title="JavaScript Object Notation">JSON</abbr> file, we will
+          need to parse it using <code>.then</code> as part of our
+          <code>fetch()</code>.
+        </p>
+        <p>
+          Remember, the API will only return the data that was requested. It is
+          up to the developer to properly handle/parse the response and display
+          the results.
+        </p>
+      </section>
 
-            <section class="section-4" id="section-4">
-                <h2>Why and Where Would you use them?</h2>
-                <p>
-                    From a development perspective there are several reasons
-                    where and why you would use APIs. Arguably the two biggest
-                    are:
-                </p>
-                <dl>
-                    <dt>Functionality</dt>
-                    <dd>
-                        You can use them to provide access to certain features
-                        and functions that would be difficult to build yourself.
-                    </dd>
-                    <dt>Speed</dt>
-                    <dd>You can use them to reduce development time.</dd>
-                </dl>
-                <p>
-                    Utilizing existing APIs is a good way to use existing
-                    resources compared to having to build them from
-                    scratch.Because of this you can offer a variety of
-                    connectivity to local weather forecasts, traffic updates,
-                    social media, nearly anything.
-                </p>
-                <p>
-                    A real world example (which may sound familiar) that
-                    highlights both of these reasons is if someone wanted a
-                    website that included a selection of changing cat images.
-                    One option is implementing this ourselves.
-                </p>
-                <p>
-                    That would entail spending time scouring the web trying to
-                    find as many copyright free images of cats as possible,
-                    building the database, filling it with those images, paying
-                    to host it on a server, and every other step in between.
-                </p>
-                <p>
-                    <em>Or</em>, we could choose the second option: we use the
-                    web API that's already built to do just that.
-                </p>
-                <h3>Other real-word examples of using APIs:</h3>
-                <dl>
-                    <dt>An e-Commerce Site</dt>
-                    <dd>
-                        It needs a secure way for customers to pay as well as
-                        being able to ship/track their orders. You could code
-                        those from scratch or use existing APIs like the ones
-                        available from Paypal and Fed Ex.
-                    </dd>
+      <section class="section-4" id="section-4">
+        <h2>Why and Where Would you use them?</h2>
+        <p>
+          From a development perspective there are several reasons where and why
+          you would use APIs. Arguably the two biggest are:
+        </p>
+        <dl>
+          <dt>Functionality</dt>
+          <dd>
+            You can use them to provide access to certain features and functions
+            that would be difficult to build yourself.
+          </dd>
+          <dt>Speed</dt>
+          <dd>You can use them to reduce development time.</dd>
+        </dl>
+        <p>
+          Utilizing existing APIs is a good way to use existing resources
+          compared to having to build them from scratch.Because of this you can
+          offer a variety of connectivity to local weather forecasts, traffic
+          updates, social media, nearly anything.
+        </p>
+        <p>
+          A real world example (which may sound familiar) that highlights both
+          of these reasons is if someone wanted a website that included a
+          selection of changing cat images. One option is implementing this
+          ourselves.
+        </p>
+        <p>
+          That would entail spending time scouring the web trying to find as
+          many copyright free images of cats as possible, building the database,
+          filling it with those images, paying to host it on a server, and every
+          other step in between.
+        </p>
+        <p>
+          <em>Or</em>, we could choose the second option: we use the web API
+          that's already built to do just that.
+        </p>
+        <h3>Other real-word examples of using APIs:</h3>
+        <dl>
+          <dt>An e-Commerce Site</dt>
+          <dd>
+            It needs a secure way for customers to pay as well as being able to
+            ship/track their orders. You could code those from scratch or use
+            existing APIs like the ones available from Paypal and Fed Ex.
+          </dd>
 
-                    <dt>A Fantasy Football League</dt>
-                    <dd>
-                        Participants want to be change their roster, to look at
-                        players stats, and any sport specific news stories, all
-                        of which updates in real-time. There are APIs for that.
-                    </dd>
+          <dt>A Fantasy Football League</dt>
+          <dd>
+            Participants want to be change their roster, to look at players
+            stats, and any sport specific news stories, all of which updates in
+            real-time. There are APIs for that.
+          </dd>
 
-                    <dt>Movie Database</dt>
-                    <dd>
-                        You need to create a movie database using an API for a
-                        school project... hint hint.
-                    </dd>
-                </dl>
-                <p>
-                    As it's plain to see, there are a variety of reasons where
-                    and why individuals would want to use one or more web APIs.
-                    If we come back to the quote from section 1:
-                    <q
-                        >code that's already been written by other developers,
-                        designed to make our jobs easier</q
-                    >
-                    the amount of use cases becomes nearly infinite.
-                </p>
-            </section>
+          <dt>Movie Database</dt>
+          <dd>
+            You need to create a movie database using an API for a school
+            project... hint hint.
+          </dd>
+        </dl>
+        <p>
+          As it's plain to see, there are a variety of reasons where and why
+          individuals would want to use one or more web APIs. If we come back to
+          the quote from section 1:
+          <q
+            >code that's already been written by other developers, designed to
+            make our jobs easier</q
+          >
+          the amount of use cases becomes nearly infinite.
+        </p>
+      </section>
 
-            <section class="section-5" id="section-5">
-                <h2>Pros & Cons</h2>
+      <section class="section-5" id="section-5">
+        <h2>Pros & Cons</h2>
 
-                <h3>PROS</h3>
-                <dl class="pros-list">
-                    <dt>Saves Time</dt>
-                    <dd>
-                        Using web APIs allows developers to utilize code that is
-                        tested and functional instead of having to build it from
-                        scratch.
-                    </dd>
+        <h3>PROS</h3>
+        <dl class="pros-list">
+          <dt>Saves Time</dt>
+          <dd>
+            Using web APIs allows developers to utilize code that is tested and
+            functional instead of having to build it from scratch.
+          </dd>
 
-                    <dt>Saves Money</dt>
-                    <dd>
-                        Developing and maintaining certain functions in-house
-                        may not be feasible for individuals or smaller
-                        businesses. Using an API to “outsource” it can be more
-                        cost-effective.
-                    </dd>
+          <dt>Saves Money</dt>
+          <dd>
+            Developing and maintaining certain functions in-house may not be
+            feasible for individuals or smaller businesses. Using an API to
+            “outsource” it can be more cost-effective.
+          </dd>
 
-                    <dt>More Features</dt>
-                    <dd>
-                        Web APIs often have extensive feature sets built in,
-                        whereas in-house developers may not have the time or
-                        skillset to build.
-                    </dd>
+          <dt>More Features</dt>
+          <dd>
+            Web APIs often have extensive feature sets built in, whereas
+            in-house developers may not have the time or skillset to build.
+          </dd>
 
-                    <dt>Skillset</dt>
-                    <dd>
-                        The developers writing the API are usually experts in
-                        their respective fields. Utilizing the API takes
-                        advantage of that expertise.
-                    </dd>
-                    <dt>Scalability</dt>
-                    <dd>
-                        Most large web APIs are built to handle significant
-                        volumes of requests and can do so without issue. Smaller
-                        companies may not be able to handle the increased
-                        traffic.
-                    </dd>
+          <dt>Skillset</dt>
+          <dd>
+            The developers writing the API are usually experts in their
+            respective fields. Utilizing the API takes advantage of that
+            expertise.
+          </dd>
+          <dt>Scalability</dt>
+          <dd>
+            Most large web APIs are built to handle significant volumes of
+            requests and can do so without issue. Smaller companies may not be
+            able to handle the increased traffic.
+          </dd>
 
-                    <dt>Better UX</dt>
-                    <dd>
-                        Providing users with extra features and services via
-                        APIs can enhance their experience using your site or app
-                    </dd>
-                </dl>
+          <dt>Better UX</dt>
+          <dd>
+            Providing users with extra features and services via APIs can
+            enhance their experience using your site or app
+          </dd>
+        </dl>
 
-                <h3>Cons:</h3>
-                <dl>
-                    <dt>Third-Party Dependency</dt>
-                    <dd>
-                        Arguably the biggest disadvantage. Access is totally
-                        dependent on the availability and reliability of the API
-                        host. If it goes down or experiences other problems,
-                        then it’s no longer useable. Also, if they make changes,
-                        it can disrupt your code forcing you to spend extra time
-                        fixing it
-                    </dd>
+        <h3>Cons:</h3>
+        <dl>
+          <dt>Third-Party Dependency</dt>
+          <dd>
+            Arguably the biggest disadvantage. Access is totally dependent on
+            the availability and reliability of the API host. If it goes down or
+            experiences other problems, then it’s no longer useable. Also, if
+            they make changes, it can disrupt your code forcing you to spend
+            extra time fixing it
+          </dd>
 
-                    <dt>Lack of Documentation</dt>
-                    <dd>
-                        Lack of, or - even worse - confusing documentation of
-                        how to use or the API makes it difficult to implement
-                        (think of Frazer looking at Instagram or anything from
-                        Meta really).
-                    </dd>
-                    <dt>Geographical Access</dt>
-                    <dd>
-                        Some parts of the world may not be able to access, or
-                        will actually block access to the hosting provider of
-                        the API.
-                    </dd>
-                    <dt>Security</dt>
-                    <dd>
-                        Using web APIs introduces possible security risks and
-                        additional vulnerabilities. Especially when considering
-                        personal or payment information.
-                    </dd>
-                    <dt>Lack of Customization</dt>
-                    <dd>
-                        Web APIs have specific, pre-built functionality which
-                        may not suit every use case forcing developers to work
-                        within the confines of the API
-                    </dd>
-                    <dt>Limits Learning</dt>
-                    <dd>
-                        This is case specific but if a developer only uses APIs
-                        and doesn’t learn to code anything themselves, they
-                        limit their own development and skillset.
-                    </dd>
-                </dl>
-            </section>
+          <dt>Lack of Documentation</dt>
+          <dd>
+            Lack of, or - even worse - confusing documentation of how to use or
+            the API makes it difficult to implement (think of Frazer looking at
+            Instagram or anything from Meta really).
+          </dd>
+          <dt>Geographical Access</dt>
+          <dd>
+            Some parts of the world may not be able to access, or will actually
+            block access to the hosting provider of the API.
+          </dd>
+          <dt>Security</dt>
+          <dd>
+            Using web APIs introduces possible security risks and additional
+            vulnerabilities. Especially when considering personal or payment
+            information.
+          </dd>
+          <dt>Lack of Customization</dt>
+          <dd>
+            Web APIs have specific, pre-built functionality which may not suit
+            every use case forcing developers to work within the confines of the
+            API
+          </dd>
+          <dt>Limits Learning</dt>
+          <dd>
+            This is case specific but if a developer only uses APIs and doesn’t
+            learn to code anything themselves, they limit their own development
+            and skillset.
+          </dd>
+        </dl>
+      </section>
 
-            <section class="section-6" id="section-6">
-                <h2>Code Demo</h2>
-                <!-- API DEMO inside of this article -->
-                <article class="demo-box">
-                    <div id="movie-container"></div>
-                    <div id="buttons">
-                        <button id="now-playing-btn" class="generate-movie-btn">
-                            Random Now Playing Movie
-                        </button>
-                        <button id="popular-btn" class="generate-movie-btn">
-                            Random Popular Movie
-                        </button>
-                        <button id="top-rated-btn" class="generate-movie-btn">
-                            Random Top Rated Movie
-                        </button>
-                        <button id="upcoming-btn" class="generate-movie-btn">
-                            Random Upcoming Movie
-                        </button>
-                    </div>
-                </article>
-            </section>
+      <section class="section-6" id="section-6">
+        <h2>Code Demo</h2>
+        <!-- API DEMO inside of this article -->
+        <article class="demo-box">
+          <div id="movie-container"></div>
+          <div id="buttons">
+            <button id="now-playing-btn" class="generate-movie-btn">
+              Random Now Playing Movie
+            </button>
+            <button id="popular-btn" class="generate-movie-btn">
+              Random Popular Movie
+            </button>
+            <button id="top-rated-btn" class="generate-movie-btn">
+              Random Top Rated Movie
+            </button>
+            <button id="upcoming-btn" class="generate-movie-btn">
+              Random Upcoming Movie
+            </button>
+          </div>
+        </article>
+      </section>
 
-            <section class="section-7" id="section-7">
-                <h2>Credit and References</h2>
-                <nav>
-                    <ul>
-                        <li>
-                            <a
-                                href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >MDN Web Docs - Intro to Web APIs</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >MDN Web Docs - HTTP Request Methods</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://opensource.com/resources/what-api#:~:text=An%20API%20can%20be%20written,%2C%20C%2C%20C%2B%2B%2C%20"
-                                >Open Source - What is an API?</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://www.freecodecamp.org/news/how-to-use-apis-in-web-development/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >Free Code Camp - How to use APIs in Web
-                                Development</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://blog.postman.com/rest-api-examples/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >Postman - API Examples</a
-                            >
-                        </li>
-                        <li>
-                            <a
-                                href="https://apidog.com/blog/8-api-protocol-types/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                >API Dog - API Protocol Types</a
-                            >
-                        </li>
-                        <li><a href="https://www.geeksforgeeks.org/javascript-fetch-method/ target="_blank" rel="noopener noreferrer">Geeks for Geeks - JS Fetch Method</a></li>
-                        <li><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank" rel="noopener noreferrer">The Movie Database - API Intro</a></li>
-                    </ul>
-                </nav>
-                <p>We would also like to thank Randy "Bobandy" Gulak for use of his teaching slides in our presentation and site.</p>
-            </section>
-        </main>
-        <footer>
-            &copy; FWD 2024 - For educational purposes only | Matt, Frazer,
-            Dongwon, and Sam
-        </footer>
-    </body>
+      <section class="section-7" id="section-7">
+        <h2>Credit and References</h2>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MDN Web Docs - Intro to Web APIs</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods"
+                target="_blank"
+                rel="noopener noreferrer"
+                >MDN Web Docs - HTTP Request Methods</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://opensource.com/resources/what-api#:~:text=An%20API%20can%20be%20written,%2C%20C%2C%20C%2B%2B%2C%20"
+                >Open Source - What is an API?</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.freecodecamp.org/news/how-to-use-apis-in-web-development/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Free Code Camp - How to use APIs in Web Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://blog.postman.com/rest-api-examples/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Postman - API Examples</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://apidog.com/blog/8-api-protocol-types/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >API Dog - API Protocol Types</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.geeksforgeeks.org/javascript-fetch-method/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Geeks for Geeks - JS Fetch Method</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://developer.themoviedb.org/reference/intro/getting-started"
+                target="_blank"
+                rel="noopener noreferrer"
+                >The Movie Database - API Intro</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <p>
+          We would also like to thank Randy "Bobandy" Gulak for use of his
+          teaching slides in our presentation and site.
+        </p>
+      </section>
+    </main>
+    <footer>
+      &copy; FWD 2024 - For educational purposes only | Matt, Frazer, Dongwon,
+      and Sam
+    </footer>
+  </body>
 </html>

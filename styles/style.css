@@ -1,4 +1,4 @@
-/* Typo & Elements --------------------------------------------- */
+/* Fonts --------------------------------------------- */
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -7,14 +7,13 @@ body {
 
 h1 {
   font-size: 3rem;
-  margin: 0;
 }
 
 h2 {
   font-size: 2rem;
-  margin: 0;
-  padding-top: 5rem;
+  padding-top: 1rem;
 }
+
 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -24,18 +23,41 @@ a {
   font-size: 1rem;
 }
 
+/* Elements --------------------------------------------- */
+
+ol {
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 1rem;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-li {
+ul li {
   padding: 0;
 }
 
 button {
   padding: 2rem;
+}
+
+figure {
+  margin: 0;
+}
+
+dt {
+  margin-bottom: 0.5rem;
+}
+
+dd {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Links --------------------------------------------- */
@@ -49,13 +71,6 @@ a:active {
   text-decoration: none;
 }
 
-a {
-  display: flex;
-  align-items: center;
-  height: 3rem;
-  padding: 1rem;
-}
-
 a:hover {
   background-color: #036635;
 }
@@ -66,6 +81,22 @@ body {
   background-color: #232323;
 }
 
+@media (min-width: 50em) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* header - nav ------------------------------------- */
+
+header a {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
 .nav-bar {
   width: 100%;
   position: fixed;
@@ -74,13 +105,17 @@ body {
   background-color: black;
 }
 
+.current-showing {
+  background-color: #024021;
+  transition: 0.5s;
+}
+
 .page-links {
   position: relative;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
   border-bottom: 3px solid whitesmoke;
 }
 
@@ -88,22 +123,21 @@ body {
   cursor: pointer;
 }
 
-.page-link a {
-  padding: 0;
-  background-color: black;
+.btn-menu {
+  padding: 0 1rem;
 }
 
 .section-link {
   position: absolute;
   width: 100%;
-  top: -15rem;
+  top: -25rem;
   transition: 0.5s ease-in-out;
   background-color: black;
-  opacity: 0.95;
+  opacity: 0.85;
 }
 
 .dropdown {
-  top: 3.3rem;
+  top: 3.2rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -111,20 +145,9 @@ body {
   background-color: #036635;
 }
 
-main {
-  padding: 1rem;
-  padding-top: 7rem;
-}
-
 @media (min-width: 50em) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* page-link */
   .nav-bar {
-    width: 20%;
+    width: 18%;
     background-color: #232323;
     display: flex;
     flex-direction: column;
@@ -132,12 +155,12 @@ main {
 
   .page-links {
     border-bottom: none;
+    margin-bottom: 2rem;
   }
 
   .page-link {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10rem;
   }
 
   .page-link a {
@@ -148,17 +171,30 @@ main {
     display: none;
   }
 
-  /* section-link */
-
   .section-link {
     position: static;
     transition: 0.5s ease-in-out;
     background-color: #232323;
     opacity: 0.95;
   }
+}
 
-  /* main */
+/* main ------------------------------------- */
 
+main {
+  padding: 5rem 1rem 3rem 1rem;
+}
+
+.section-7 ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+.section-7 li {
+  padding: 0.5rem 0;
+}
+
+@media (min-width: 50em) {
   main {
     position: relative;
     left: 20%;
@@ -167,16 +203,11 @@ main {
   }
 
   section {
-    margin: 2rem 0 20rem 0;
-  }
-
-  #section-4,
-  #practice-section {
-    margin-bottom: 5rem;
+    margin: 2rem 0 3rem 0;
   }
 }
 
-/* Code Demo Section */
+/* Code Demo ------------------------------------- */
 
 .demo-box {
   position: relative;
@@ -242,19 +273,5 @@ footer {
   height: 5rem;
   width: 100%;
   background-color: #024021;
-  font-size: 0.9rem;
-}
-
-@media (min-width: 50em) {
-  footer {
-    height: 5rem;
-    font-size: 1rem;
-  }
-}
-
-/* test */
-
-.current-showing {
-  background-color: #024021;
-  transition: 0.5s;
+  font-size: 1rem;
 }
