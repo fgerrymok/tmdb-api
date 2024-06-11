@@ -226,12 +226,64 @@
 
             <section class="section-3" id="section-3">
                 <h2>What do they do?</h2>
+
+                <p>
+                    When you send a request to an API it's (generally) made up
+                    of 4 parts:
+                </p>
+                <ul>
+                    <li>
+                        <em>Method:</em> The HTTP method used to make the
+                        request, <code>GET</code> in our case.
+                    </li>
+                    <li>
+                        <em>URL/Endpoint:</em> The address of the API web server
+                        that you're requesting data from.
+                    </li>
+                    <li>
+                        <em>Parameters:</em> The data that defines what we're
+                        looking in our API request.
+                    </li>
+                    <li>
+                        <em>Headers:</em> Generally contains an API Key to
+                        authenticate the request as well as specifies the format
+                        of the data being requested.
+                    </li>
+                </ul>
+
+                <p>The response is also made up of four parts:</p>
+                <ul>
+                    <li>
+                        <em>Response code:</em> The HTTP status code that is
+                        returned by the API which let's us know if the request
+                        was successful or not. This code can be found in the
+                        devtools (if you remember our API class with Randy), the
+                        most common are 200 (OK), 404 (Not Found), and 500
+                        (Internal Server Error).
+                    </li>
+                    <li>
+                        <em>Data:</em> The data that is returned by the API
+                        (usually in JSON but sometimes in XML format).
+                    </li>
+                    <li>
+                        <em>Headers:</em> Used to specify the format of the data
+                        being returned (which hopefully matches the type
+                        specified in the request).
+                    </li>
+                    <li>
+                        <em>Links:</em> Provides more detail about the data,
+                        often including links to source, etc.
+                    </li>
+                </ul>
+
+                <p></p>
                 <p>
                     Once the API receives a valid request it will run a function
                     (or more likely multiple functions depending on how complex
                     the API is) and return whatever was requested, usually in a
                     <abbr title="JavaScript Object Notation">JSON</abbr> file.
                 </p>
+                <p></p>
                 <figure>
                     <img
                         src="./images/api-cat.png"
@@ -240,11 +292,13 @@
                     <figcaption>Source: Randy Bobandy</figcaption>
                 </figure>
                 <p>
-                    This could be as simple as a single image or something more
-                    complex like a video. If we take the TMDB API as an example,
-                    we'll be requesting different resources from a database of
-                    movie data (like images, ratings info, release dates, etc.).
-                    Since the data in the APIs response is in a
+                    This could be as simple as a single image, something more
+                    complex like a video, or an entire database of info and
+                    different media all within a json file. If we take the TMDB
+                    API as an example, we'll be requesting different resources
+                    from a database of movie data (like images, ratings info,
+                    release dates, etc.). Since the data in the APIs response is
+                    in a
                     <abbr title="JavaScript Object Notation">JSON</abbr> file,
                     we will need to parse it using <code>.then</code> as part of
                     our <code>fetch()</code>.
@@ -331,97 +385,102 @@
             </section>
 
             <section class="section-5" id="section-5">
-                <h2>Pros & Cons</h2>
+                <article>
+                    <h2>Pros & Cons</h2>
 
-                <h3>PROS</h3>
-                <dl class="pros-list">
-                    <dt>Saves Time</dt>
-                    <dd>
-                        Using web APIs allows developers to utilize code that is
-                        tested and functional instead of having to build it from
-                        scratch.
-                    </dd>
+                    <h3>PROS</h3>
+                    <dl class="pros-list">
+                        <dt>Saves Time</dt>
+                        <dd>
+                            Using web APIs allows developers to utilize code
+                            that is tested and functional instead of having to
+                            build it from scratch.
+                        </dd>
 
-                    <dt>Saves Money</dt>
-                    <dd>
-                        Developing and maintaining certain functions in-house
-                        may not be feasible for individuals or smaller
-                        businesses. Using an API to “outsource” it can be more
-                        cost-effective.
-                    </dd>
+                        <dt>Saves Money</dt>
+                        <dd>
+                            Developing and maintaining certain functions
+                            in-house may not be feasible for individuals or
+                            smaller businesses. Using an API to “outsource” it
+                            can be more cost-effective.
+                        </dd>
 
-                    <dt>More Features</dt>
-                    <dd>
-                        Web APIs often have extensive feature sets built in,
-                        whereas in-house developers may not have the time or
-                        skillset to build.
-                    </dd>
+                        <dt>More Features</dt>
+                        <dd>
+                            Web APIs often have extensive feature sets built in,
+                            whereas in-house developers may not have the time or
+                            skillset to build.
+                        </dd>
 
-                    <dt>Skillset</dt>
-                    <dd>
-                        The developers writing the API are usually experts in
-                        their respective fields. Utilizing the API takes
-                        advantage of that expertise.
-                    </dd>
-                    <dt>Scalability</dt>
-                    <dd>
-                        Most large web APIs are built to handle significant
-                        volumes of requests and can do so without issue. Smaller
-                        companies may not be able to handle the increased
-                        traffic.
-                    </dd>
+                        <dt>Skillset</dt>
+                        <dd>
+                            The developers writing the API are usually experts
+                            in their respective fields. Utilizing the API takes
+                            advantage of that expertise.
+                        </dd>
+                        <dt>Scalability</dt>
+                        <dd>
+                            Most large web APIs are built to handle significant
+                            volumes of requests and can do so without issue.
+                            Smaller companies may not be able to handle the
+                            increased traffic.
+                        </dd>
 
-                    <dt>Better UX</dt>
-                    <dd>
-                        Providing users with extra features and services via
-                        APIs can enhance their experience using your site or app
-                    </dd>
-                </dl>
+                        <dt>Better UX</dt>
+                        <dd>
+                            Providing users with extra features and services via
+                            APIs can enhance their experience using your site or
+                            app
+                        </dd>
+                    </dl>
+                </article>
 
-                <h3>Cons:</h3>
-                <dl>
-                    <dt>Third-Party Dependency</dt>
-                    <dd>
-                        Arguably the biggest disadvantage. Access is totally
-                        dependent on the availability and reliability of the API
-                        host. If it goes down or experiences other problems,
-                        then it’s no longer useable. Also, if they make changes,
-                        it can disrupt your code forcing you to spend extra time
-                        fixing it
-                    </dd>
+                <article>
+                    <h3>Cons:</h3>
+                    <dl>
+                        <dt>Third-Party Dependency</dt>
+                        <dd>
+                            Arguably the biggest disadvantage. Access is totally
+                            dependent on the availability and reliability of the
+                            API host. If it goes down or experiences other
+                            problems, then it’s no longer useable. Also, if they
+                            make changes, it can disrupt your code forcing you
+                            to spend extra time fixing it
+                        </dd>
 
-                    <dt>Lack of Documentation</dt>
-                    <dd>
-                        Lack of, or - even worse - confusing documentation of
-                        how to use or the API makes it difficult to implement
-                        (think of Frazer looking at Instagram or anything from
-                        Meta really).
-                    </dd>
-                    <dt>Geographical Access</dt>
-                    <dd>
-                        Some parts of the world may not be able to access, or
-                        will actually block access to the hosting provider of
-                        the API.
-                    </dd>
-                    <dt>Security</dt>
-                    <dd>
-                        Using web APIs introduces possible security risks and
-                        additional vulnerabilities. Especially when considering
-                        personal or payment information.
-                    </dd>
-                    <dt>Lack of Customization</dt>
-                    <dd>
-                        Web APIs have specific, pre-built functionality which
-                        may not suit every use case forcing developers to work
-                        within the confines of the API
-                    </dd>
-                    <dt>Limits Learning</dt>
-                    <dd>
-                        This is case specific but if a developer only uses APIs
-                        and doesn’t learn to code anything themselves, they
-                        limit their own development and skillset.
-                    </dd>
-                </dl>
+                        <dt>Lack of Documentation</dt>
+                        <dd>
+                            Lack of, or - even worse - confusing documentation
+                            of how to use or the API makes it difficult to
+                            implement (think of Frazer looking at Instagram or
+                            anything from Meta really).
+                        </dd>
+                        <dt>Geographical Access</dt>
+                        <dd>
+                            Some parts of the world may not be able to access,
+                            or will actually block access to the hosting
+                            provider of the API.
+                        </dd>
+                        <dt>Security</dt>
+                        <dd>
+                            Using web APIs introduces possible security risks
+                            and additional vulnerabilities. Especially when
+                            considering personal or payment information.
+                        </dd>
+                        <dt>Lack of Customization</dt>
+                        <dd>
+                            Web APIs have specific, pre-built functionality
+                            which may not suit every use case forcing developers
+                            to work within the confines of the API
+                        </dd>
+                        <dt>Limits Learning</dt>
+                        <dd>
+                            This is case specific but if a developer only uses
+                            APIs and doesn’t learn to code anything themselves,
+                            they limit their own development and skillset.
+                        </dd>
+                    </dl>
+                </article>
             </section>
 
             <section class="section-6" id="section-6">
