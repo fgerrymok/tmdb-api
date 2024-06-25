@@ -75,6 +75,11 @@ a:hover {
   background-color: #036635;
 }
 
+.external-link {
+  margin-bottom: 1rem;
+}
+
+
 /* body --------------------------------------------- */
 
 body {
@@ -125,6 +130,7 @@ header a {
 
 .btn-menu {
   padding: 0 1rem;
+  font-size: 1.5rem;
 }
 
 .section-link {
@@ -133,7 +139,7 @@ header a {
   top: -25rem;
   transition: 0.5s ease-in-out;
   background-color: black;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .dropdown {
