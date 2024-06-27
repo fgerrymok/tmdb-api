@@ -57,6 +57,7 @@ ul {
 
 ul li {
     padding: 0;
+    margin: 1rem;
 }
 
 figure {
@@ -119,6 +120,10 @@ header a {
     top: 0;
     z-index: 100;
     background-color: black;
+}
+
+.nav-bar li {
+    margin: 0;
 }
 
 .current-showing {

@@ -61,6 +61,9 @@
           stands for: <em>Application Programming Interface</em>, but what does
           that really mean?
         </p>
+        <p>In simplest terms, an interface is something that allows two things to interact with each other. Furthermore, they usually "abstract" more complicated processes making them "easy-to-use". A good example is a light switch, there are very technical electronics underneath, but the easy to use interface of a lightswitch makes the lights turn on, or off. 
+        </p>
+        <p>When it comes to the “application programming” side, it's a fancy way of saying an interface that allow two applications can interact. In the case of our code along, how our website can interact with the TMDP API.</p>
         <p>It's been described by a certain professor as:</p>
         <blockquote>
           <p>
@@ -107,10 +110,7 @@
           internet.
         </p>
         <p>
-          Therefore, a web API is a block of code that has been written by
-          somebody else that makes our lives easier which can be accessed over
-          the internet. Some are free to use while others require payment,
-          almost all require users to sign up for an API key.
+          Therefore, a simple definition for a web API is a block of code that has been written by somebody else that makes our lives easier which can be accessed over the internet. Some are free to use while others require payment, almost all require users to sign up for an API key.
         </p>
       </section>
 
@@ -123,7 +123,7 @@
         </p>
         <p>
           Most web APIs (free or paid) require their users to register for an
-          account and API key to be able to use their services/resources.
+          account and API key to be able to use their services/resources. These API keys are used to authenticate teh use making the request for both security purposes as well as monitoring and/or limiting usage. 
         </p>
         <ol>
           <li>
@@ -132,8 +132,7 @@
           </li>
           <li>
             Manage the data transfer that happens between the code (like your
-            website) making the request and the server that sends a response
-            (often in JSON and less often in XML format).
+            website) making the request and the server that sends a response.
           </li>
         </ol>
         <figure>
@@ -143,24 +142,20 @@
           />
         </figure>
         <p>
-          Rules? What rules? How do we know what those rules are? Those rules
-          will (hopefully) be explained in the specific APIs documentation.
-          Another thing that will be explained is the specific
-          <em>protocol</em> the API is using.
+          Rules? What rules? Those rules will (hopefully) be explained in the specific APIs documentation. Two main things that will always need to be included in these rules are: the APIs <em>endpoints</em> needed to connect to it, and the <em>protocol</em> the API is using.
         </p>
 
-        <p>
-          The protocol an API uses specifies how it connects to the internet,
+        <p><b>Endpoint URL:</b> The address(es) of the API web server that you're requesting data from.</p>
+
+        <p><b>API Protocol:</b> specifies how it connects to the internet,
           how other parties connect to it, and how it receives and transmits
-          information. There are several API protocols in use today:
+          data. There are several API protocols in use today:
           <abbr title="Representational State Transfer">REST</abbr>,
           <abbr title="Simple Object Access">SOAP</abbr>,
           <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL, to name a
           few. That being said, the REST or
           <em>Representational State Transfer</em> protocol (which technically
-          isn't a protocol at all but a set of guidelines) is the most widely
-          used for Web APIs today. Because of this it's the one we're going to
-          focus on.
+          isn't a protocol at all but a set of guidelines on how to use certain HTTP methods) is the most widely used for Web APIs today. A recent survey shows that nearly 80% of public web APIs use the REST protocol and because of this it's the one we're going to focus on.
         </p>
         <p>
           The
@@ -169,7 +164,7 @@
           <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s built in
           methods: <code>GET</code>, <code>POST</code>, <code>PUT</code>, and/or
           <code>DELETE</code> which (with a valid API key) connect to the API's
-          server using specific URLs known as <em>Endpoints</em>.
+          server using specific URLs/endpoints.
         </p>
         <h3>What are these HTTP Methods?</h3>
         <p>
@@ -179,27 +174,21 @@
           communicate with web APIs are <code>GET</code>, <code>POST</code>,
           <code>PUT</code>, and/or <code>DELETE</code>.
         </p>
-
+        <img src="./images/get-protocol.png" alt="Simple diagram of different HTTP methods connecting a browser and server">
         <p>
-          <code>GET</code> is the HTTP method used to make requests to a server
-          (whereas <code>POST</code>, <code>PUT</code>, and/or
-          <code>DELETE</code> are used to submit, create, or delete resources on
-          that server).
+          <code>GET</code> is the HTTP method used to make requests to a server and the response is typically returned as <abbr title="JavaScript Object Notation">JSON</abbr> data (although other data types like <abbr title="Extensible Markup Languag">XML</abbr>can be returned as well). <code>POST</code>, <code>PUT</code>, and/or
+          <code>DELETE</code> on the otherhand are used to submit, create, or delete resources on that server and are generally used by those actually developing the API.
         </p>
         <p>
           Since (most) public web APIs only allow
           <code>GET</code> requests and because <code>GET</code> is also the
           HTTP method being called when we use <code>fetch()</code> in
-          JavaScript it's what we'll be focusing on.
-        </p>
-        <p>
-          <em>Endpoints</em> are simply URLs that can be used to send requests
-          to an API.
+          JavaScript (which is also an API) it's what we'll be focusing on.
         </p>
         <aside>
           <p>
             If you want to learn more about the other API protocols or HTTP
-            methods, the following two links are very helpful:
+            methods, the following links are very helpful:
             <nav>
               <ul>
           <li class="external-link"><a
@@ -220,11 +209,10 @@
           </p>
         </aside>
       </section>
-
       <section class="section-3" id="section-3">
         <h2>What do they do?</h2>
         <p>
-          When you send a request to an API it's (generally) made up
+          When you send a request to an API it's made up
           of 4 parts:
       </p>
       <ul>
@@ -237,7 +225,7 @@
               that you're requesting data from.
           </li>
           <li>
-              <b>Parameters:</b> The data that defines what we're
+              <b>Parameters:</b> Defines what we're
               looking for in our API request.
           </li>
           <li>
@@ -258,33 +246,27 @@
               (Internal Server Error).
           </li>
           <li>
-              <b>Data:</b> The data that is returned by the API
-              (usually in
-              <abbr title="JavaScript Object Notation">JSON</abbr>
-              sometimes in
-              <abbr title="Extensible Markup Language">XML</abbr>
-              format).
+              <b>Data:</b> The data that is returned by the API, usually in
+              <abbr title="JavaScript Object Notation">JSON</abbr> format but other formats like <abbr title="Extensible Markup Language">XML</abbr> can also be requested.
           </li>
           <li>
               <b>Headers:</b> Used to specify the format of the data
-              being returned (which hopefully matches the type
-              specified in the request).
+              being returned (JSON, XML, etc.).
           </li>
           <li>
               <b>Links:</b> Provides more detail about the data, often
               including links to source, etc.
           </li>
       </ul>
-
       <p>
-          There are several types of parameters used in REST APIs, the
+          <b>Parameters:</b> There are several types of parameters used in REST APIs, the
           most common and the one we'll be using is known as a
           <em>query string</em>. You've likely seen them in the
-          browser's address bar, most likely after looking for
+          browser's address bar, most likely after searching for
           something from a search engine like Google.
       </p>
       <p>
-          You can see them in the query string at the end of a URL or
+          In an API you can see the query string at the end of a URL or
           Endpoint, after the <code>?</code> character.
       </p>
       <p>
@@ -295,7 +277,7 @@
           <code>language=us</code> and the <code></code>page=1
       </p>
       <p>
-          In the headers is where you will specify the format of the
+        <b>Headers:</b> In the headers is where you will specify the format of the
           data you are requesting from the API, more often than not a
           JSON file, as well as authenticating your request by
           including your API key.
@@ -309,8 +291,8 @@
               }</code
           >
           <br />
-          As you can see they're accepting json file format and
-          authorizing with their API key.
+          As you can see they're accepting json file format and are
+          including their API key for authorization.
       </p>
 
       <p>
@@ -327,20 +309,13 @@
           <figcaption>Source: Randy Bobandy</figcaption>
         </figure>
         <p>
-          This could be as simple as a single image or something more complex
-          like a video. If we take the TMDB API as an example, we'll be
-          requesting different resources from a database of movie data (like
-          images, ratings info, release dates, etc.). Since the data in the APIs
-          response is in a
-          <abbr title="JavaScript Object Notation">JSON</abbr> file, we will
-          need to parse it using <code>.then</code> as part of our
-          <code>fetch()</code>.
+          This could be as simple as a single string, an image, or something more complex. If we take the TMDB API as an example, we'll be requesting different resources from a database of movie data (like images, ratings info, release dates, etc.). Since the data in the APIs
+          response is in a <abbr title="JavaScript Object Notation">JSON</abbr> file, we will
+          need to parse it using <code>.then</code> as part of our <code>fetch()</code>.
         </p>
         <p>
           Remember, the API will only return the data that was requested. It is
-          up to the developer to properly handle/parse the response and display
-          the results.
-        </p>
+          up to the developer to properly handle/parse the response.
       </section>
 
       <section class="section-4" id="section-4">
@@ -356,7 +331,7 @@
             that would be difficult to build yourself.
           </dd>
           <dt>Speed</dt>
-          <dd>You can use them to reduce development time.</dd>
+          <dd>You can add those features and significantly reduce development time.</dd>
         </dl>
         <p>
           Utilizing existing APIs is a good way to use existing resources
