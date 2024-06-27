@@ -212,7 +212,7 @@
       <section class="section-3" id="section-3">
         <h2>What do they do?</h2>
         <p>
-          When you send a request to an API it's (generally) made up
+          When you send a request to an API it's made up
           of 4 parts:
       </p>
       <ul>
@@ -225,7 +225,7 @@
               that you're requesting data from.
           </li>
           <li>
-              <b>Parameters:</b> The data that defines what we're
+              <b>Parameters:</b> Defines what we're
               looking for in our API request.
           </li>
           <li>
@@ -246,33 +246,27 @@
               (Internal Server Error).
           </li>
           <li>
-              <b>Data:</b> The data that is returned by the API
-              (usually in
-              <abbr title="JavaScript Object Notation">JSON</abbr>
-              sometimes in
-              <abbr title="Extensible Markup Language">XML</abbr>
-              format).
+              <b>Data:</b> The data that is returned by the API, usually in
+              <abbr title="JavaScript Object Notation">JSON</abbr> format but other formats like <abbr title="Extensible Markup Language">XML</abbr> can also be requested.
           </li>
           <li>
               <b>Headers:</b> Used to specify the format of the data
-              being returned (which hopefully matches the type
-              specified in the request).
+              being returned (JSON, XML, etc.).
           </li>
           <li>
               <b>Links:</b> Provides more detail about the data, often
               including links to source, etc.
           </li>
       </ul>
-
       <p>
-          There are several types of parameters used in REST APIs, the
+          <b>Parameters:</b> There are several types of parameters used in REST APIs, the
           most common and the one we'll be using is known as a
           <em>query string</em>. You've likely seen them in the
-          browser's address bar, most likely after looking for
+          browser's address bar, most likely after searching for
           something from a search engine like Google.
       </p>
       <p>
-          You can see them in the query string at the end of a URL or
+          In an API you can see the query string at the end of a URL or
           Endpoint, after the <code>?</code> character.
       </p>
       <p>
@@ -283,7 +277,7 @@
           <code>language=us</code> and the <code></code>page=1
       </p>
       <p>
-          In the headers is where you will specify the format of the
+        <b>Headers:</b> In the headers is where you will specify the format of the
           data you are requesting from the API, more often than not a
           JSON file, as well as authenticating your request by
           including your API key.
@@ -297,8 +291,8 @@
               }</code
           >
           <br />
-          As you can see they're accepting json file format and
-          authorizing with their API key.
+          As you can see they're accepting json file format and are
+          including their API key for authorization.
       </p>
 
       <p>
@@ -315,20 +309,13 @@
           <figcaption>Source: Randy Bobandy</figcaption>
         </figure>
         <p>
-          This could be as simple as a single image or something more complex
-          like a video. If we take the TMDB API as an example, we'll be
-          requesting different resources from a database of movie data (like
-          images, ratings info, release dates, etc.). Since the data in the APIs
-          response is in a
-          <abbr title="JavaScript Object Notation">JSON</abbr> file, we will
-          need to parse it using <code>.then</code> as part of our
-          <code>fetch()</code>.
+          This could be as simple as a single string, an image, or something more complex. If we take the TMDB API as an example, we'll be requesting different resources from a database of movie data (like images, ratings info, release dates, etc.). Since the data in the APIs
+          response is in a <abbr title="JavaScript Object Notation">JSON</abbr> file, we will
+          need to parse it using <code>.then</code> as part of our <code>fetch()</code>.
         </p>
         <p>
           Remember, the API will only return the data that was requested. It is
-          up to the developer to properly handle/parse the response and display
-          the results.
-        </p>
+          up to the developer to properly handle/parse the response.
       </section>
 
       <section class="section-4" id="section-4">
@@ -344,7 +331,7 @@
             that would be difficult to build yourself.
           </dd>
           <dt>Speed</dt>
-          <dd>You can use them to reduce development time.</dd>
+          <dd>You can add those features and significantly reduce development time.</dd>
         </dl>
         <p>
           Utilizing existing APIs is a good way to use existing resources
