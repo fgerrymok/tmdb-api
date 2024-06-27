@@ -142,24 +142,20 @@
           />
         </figure>
         <p>
-          Rules? What rules? How do we know what those rules are? Those rules
-          will (hopefully) be explained in the specific APIs documentation.
-          Another thing that will be explained is the specific
-          <em>protocol</em> the API is using.
+          Rules? What rules? Those rules will (hopefully) be explained in the specific APIs documentation. Two main things that will always need to be included in these rules are: the APIs <em>endpoints</em> needed to connect to it, and the <em>protocol</em> the API is using.
         </p>
 
-        <p>
-          The protocol an API uses specifies how it connects to the internet,
+        <p><b>Endpoint URL:</b> The address(es) of the API web server that you're requesting data from.</p>
+
+        <p><b>API Protocol:</b> specifies how it connects to the internet,
           how other parties connect to it, and how it receives and transmits
-          information. There are several API protocols in use today:
+          data. There are several API protocols in use today:
           <abbr title="Representational State Transfer">REST</abbr>,
           <abbr title="Simple Object Access">SOAP</abbr>,
           <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL, to name a
           few. That being said, the REST or
           <em>Representational State Transfer</em> protocol (which technically
-          isn't a protocol at all but a set of guidelines) is the most widely
-          used for Web APIs today. A recent survey shows that 80% of public web APIs use the REST protocol and because of this it's the one we're going to
-          focus on.
+          isn't a protocol at all but a set of guidelines on how to use certain HTTP methods) is the most widely used for Web APIs today. A recent survey shows that nearly 80% of public web APIs use the REST protocol and because of this it's the one we're going to focus on.
         </p>
         <p>
           The
@@ -168,7 +164,7 @@
           <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s built in
           methods: <code>GET</code>, <code>POST</code>, <code>PUT</code>, and/or
           <code>DELETE</code> which (with a valid API key) connect to the API's
-          server using specific URLs known as <em>Endpoints</em>.
+          server using specific URLs/endpoints.
         </p>
         <h3>What are these HTTP Methods?</h3>
         <p>
@@ -187,16 +183,12 @@
           Since (most) public web APIs only allow
           <code>GET</code> requests and because <code>GET</code> is also the
           HTTP method being called when we use <code>fetch()</code> in
-          JavaScript it's what we'll be focusing on.
-        </p>
-        <p>
-          <em>Endpoints</em> are simply URLs that can be used to send requests
-          to an API.
+          JavaScript (which is also an API) it's what we'll be focusing on.
         </p>
         <aside>
           <p>
             If you want to learn more about the other API protocols or HTTP
-            methods, the following two links are very helpful:
+            methods, the following links are very helpful:
             <nav>
               <ul>
           <li class="external-link"><a
