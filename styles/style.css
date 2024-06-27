@@ -5,11 +5,12 @@
     margin: 0 auto;
 }
 
-/* Fonts --------------------------------------------- */
+/* Typography --------------------------------------------- */
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+    color: #ffffff;
+    font-size: 1rem;
 }
 
 h1 {
@@ -22,13 +23,9 @@ h2 {
 }
 
 p {
-    font-size: 1rem;
     line-height: 1.5;
-}
+} 
 
-a {
-    font-size: 1rem;
-}
 
 /* Elements --------------------------------------------- */
 
@@ -37,8 +34,8 @@ img {
 }
 
 figcaption {
-text-align: right;
-font-size: .75rem;
+    text-align: right;
+    font-size: 0.75rem;
 }
 
 ol {
@@ -82,6 +79,7 @@ a:focus,
 a:active {
     color: white;
     text-decoration: none;
+    line-height: 1;
 }
 
 a:hover {
@@ -166,6 +164,8 @@ header a {
 .current-page {
     background-color: #036635;
 }
+
+/* nav - desktop ------------------------> */
 
 @media (min-width: 50em) {
     .nav-bar {
@@ -284,6 +284,10 @@ main {
 #movie-container img:hover {
     transform: scale(1.05);
 }
+
+
+/* Code Demo - desktop -------------------------> */
+
 
 @media (min-width: 50em) {
     .demo-box {
