@@ -1,3 +1,24 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN ANOTHER FILE like normalize.css)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Links
+	- Elements
+# Components
+	- Header / Nav
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*
+
 /* Site Wrapper */
 
 .site-wrapper {
@@ -5,7 +26,21 @@
     margin: 0 auto;
 }
 
-/* Fonts --------------------------------------------- */
+/* body --------------------------------------------- */
+
+body {
+    background-color: #232323;
+}
+
+@media (min-width: 50em) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* Typography --------------------------------------------- */
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -30,16 +65,41 @@ a {
     font-size: 1rem;
 }
 
+
+/* Links --------------------------------------------- */
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #09e075  ;                                                   
+}
+a:hover {
+    background-color: #024021;  
+}  
+
 /* Elements --------------------------------------------- */
 
 img {
     border-radius: 1rem;
 }
 
+figure {
+    margin: 0;
+}
+
 figcaption {
 text-align: right;
 font-size: .75rem;
 }
+
+/*   Lists   */
 
 ol {
     padding-left: 1.5rem;
@@ -60,10 +120,6 @@ ul li {
     margin: 1rem;
 }
 
-figure {
-    margin: 0;
-}
-
 dt {
     margin-bottom: 0.5rem;
 }
@@ -73,39 +129,12 @@ dd {
     margin-bottom: 1rem;
 }
 
-/* Links --------------------------------------------- */
 
-a,
-a:visited,
-a:hover,
-a:focus,
-a:active {
-    color: white;
-    text-decoration: none;
-}
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*
 
-a:hover {
-    background-color: #036635;
-}
-
-.external-link {
-    margin-bottom: 1rem;
-}
-
-/* body --------------------------------------------- */
-
-body {
-    background-color: #232323;
-}
-
-@media (min-width: 50em) {
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* header - nav ------------------------------------- */
+/* Header / Nav  ------------------------------------- */
 
 header a {
     display: flex;
@@ -167,6 +196,9 @@ header a {
     background-color: #036635;
 }
 
+
+/*   Header / Nav - desktop   */
+
 @media (min-width: 50em) {
     .nav-bar {
         width: 18%;
@@ -202,7 +234,7 @@ header a {
     }
 }
 
-/* main ------------------------------------- */
+/* Main ------------------------------------- */
 
 main {
     padding: 5rem 1rem 3rem 1rem;
@@ -285,6 +317,8 @@ main {
     transform: scale(1.05);
 }
 
+/* Code Demo - desktop */
+
 @media (min-width: 50em) {
     .demo-box {
         height: 44rem;
@@ -292,6 +326,7 @@ main {
 }
 
 /* Footer --------------------------------------------- */
+
 footer {
     display: flex;
     justify-content: center;
