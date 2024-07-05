@@ -143,6 +143,15 @@ header a {
     padding: 0 1rem;
 }
 
+#logo {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.btn-menu {
+    padding: 0 1rem;
+    font-size: 2rem;
+}
 .nav-bar {
     width: 100%;
     position: fixed;
@@ -173,10 +182,6 @@ header a {
     cursor: pointer;
 }
 
-.btn-menu {
-    padding: 0 1rem;
-    font-size: 1.5rem;
-}
 
 .section-link {
     position: absolute;
@@ -188,7 +193,7 @@ header a {
 }
 
 .dropdown {
-    top: 3.2rem;
+    top: 5rem;
     transition: 0.5s ease-in-out;
 }
 
