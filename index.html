@@ -62,8 +62,7 @@
                     </li>
                     <li>
                         <a href="#section-4"
-                            >Why and Where would you use them?</a
-                        >
+                            >Why and Where would you use them?</a>
                     </li>
                     <li>
                         <a href="#section-5">Pros & Cons</a>
@@ -92,8 +91,7 @@
                     what does that really mean?
                 </p>
                 <p>
-                    In simplest terms, an interface is something that allows two
-                    things to interact with each other. Furthermore, they
+                    In simplest terms, an interface is something that allows two things to interact with each other. Furthermore, they
                     usually "abstract" more complicated processes making them
                     "easy-to-use". A good example is a light switch, there are
                     very technical electronics underneath, but the easy to use
@@ -101,9 +99,7 @@
                 </p>
                 <p>
                     When it comes to the “application programming” side, it's a
-                    fancy way of saying an interface that allow two applications
-                    can interact. In the case of our code along, how our website
-                    can interact with the TMDP API.
+                    fancy way of saying an interface that allows two applications to interact. In the case of our code along how our website can interact with the TMDP API.
                 </p>
                 <p>It's been described by a certain professor as:</p>
                 <blockquote>
@@ -140,18 +136,11 @@
                 <p>
                     Both the <abbr title="document object model">DOM</abbr> and
                     event are great representations of
-                    <q
-                        >code that's already been written that makes our lives
-                        easier</q
-                    >. I don't know about you guys but at this point in my
-                    learning if I had to figure out all of the code needed to
-                    achieve the same thing I would be in trouble.
+                    <q>code that's already been written that makes our lives
+                        easier</q>. I don't know about you guys but at this point in my learning if I had to figure out all of the code needed to achieve the same thing I would be in trouble.
                 </p>
                 <p>
-                    Regarding Web APIs specifically, the technical definition is
-                    “an API that can be accessed using the HTTP protocol”. Super
-                    helpful, right? It simply means an API that can be used and
-                    accessed over the internet.
+                    Regarding Web APIs specifically, the technical definition is “an API that can be accessed using the HTTP protocol”. Super helpful, right? It simply means an API that can be used and accessed over the internet.
                 </p>
                 <p>
                     Therefore, a simple definition for a web API is a block of
@@ -170,16 +159,14 @@
                     it be a data source, an application, or anything in between.
                 </p>
                 <p>
-                    Most web APIs (free or paid) require their users to register
-                    for an account and API key to be able to use their
+                    Most web APIs (free or paid) require their users to register for an account and API key to be able to use their
                     services/resources. These API keys are used to authenticate
-                    teh use making the request for both security purposes as
-                    well as monitoring and/or limiting usage.
+                    the user making the request for both security purposes as
+                    well as monitoring and/or limiting usage. They will also always do two things:
                 </p>
                 <ol>
                     <li>
-                        Sets rules you need to follow for interacting with it
-                        (including authenticating the user via API key).
+                        Set the rules you need to follow for interacting with it (including authenticating the user via API key).
                     </li>
                     <li>
                         Manage the data transfer that happens between the code
@@ -194,44 +181,30 @@
                     />
                 </figure>
                 <p>
-                    Rules? What rules? Those rules will (hopefully) be explained
-                    in the specific APIs documentation. Two main things that
-                    will always need to be included in these rules are: the APIs
-                    <em>endpoints</em> needed to connect to it, and the
-                    <em>protocol</em> the API is using.
+                    Rules? What rules? Those rules will (hopefully) be explained in the specific APIs documentation. Two things that should always be included in these rules are: the APIs <em>endpoints</em> needed to connect to it, and the <em>protocol</em> the API is using.
                 </p>
 
                 <p>
-                    <b>Endpoint URL:</b> The address(es) of the API web server
+                    <b>Endpoint:</b> The URL address(es) of the API web server
                     that you're requesting data from.
                 </p>
 
                 <p>
                     <b>API Protocol:</b> specifies how it connects to the
                     internet, how other parties connect to it, and how it
-                    receives and transmits data. There are several API protocols
-                    in use today:
+                    receives and transmits data. There are several API protocols in use today:
                     <abbr title="Representational State Transfer">REST</abbr>,
                     <abbr title="Simple Object Access">SOAP</abbr>,
-                    <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL,
-                    to name a few. That being said, the REST or
+                    <abbr title="Remote Procedure Call">RPC</abbr>, and GraphQL, to name a few. That being said, the REST or
                     <em>Representational State Transfer</em> protocol (which
                     technically isn't a protocol at all but a set of guidelines
                     on how to use certain HTTP methods) is the most widely used
-                    for Web APIs today. A recent survey shows that nearly 80% of
-                    public web APIs use the REST protocol and because of this
-                    it's the one we're going to focus on.
+                    for Web APIs today. A recent survey shows that nearly 80% of public web APIs use the REST protocol and because of this it's the one we're going to focus on.
                 </p>
 
                 <p>
-                    The
-                    <abbr title="Representational State Transfer">REST</abbr>
-                    protocol works by using
-                    <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s
-                    built in methods: <code>GET</code>, <code>POST</code>,
-                    <code>PUT</code>, and/or <code>DELETE</code> which (with a
-                    valid API key) connect to the API's server using specific
-                    URLs/endpoints.
+                    The <abbr title="Representational State Transfer">REST</abbr> protocol works by using <abbr title="Hypertext Transfer Protocol">HTTP</abbr>'s built in methods: <code>GET</code>, <code>POST</code>, <code>PUT</code>, and/or <code>DELETE</code> which (with a
+                    valid API key) connect to the API's server using specific URLs/endpoints.
                 </p>
 
                 <h3>What are these HTTP Methods?</h3>
@@ -252,7 +225,7 @@
                     a server and the response is typically returned as
                     <abbr title="JavaScript Object Notation">JSON</abbr> data
                     (although other data types like
-                    <abbr title="Extensible Markup Languag">XML</abbr>can be
+                    <abbr title="Extensible Markup Languag">XML</abbr> can be
                     returned as well). <code>POST</code>, <code>PUT</code>,
                     and/or <code>DELETE</code> on the otherhand are used to
                     submit, create, or delete resources on that server and are
@@ -262,9 +235,7 @@
                 <p>
                     Since (most) public web APIs only allow
                     <code>GET</code> requests and because <code>GET</code> is
-                    also the HTTP method being called when we use
-                    <code>fetch()</code> in JavaScript (which is also an API)
-                    it's what we'll be focusing on.
+                    also the HTTP method being called when we use <code>fetch()</code> in JavaScript (which is also an API) it's what we'll be focusing on.
                 </p>
 
                 <aside>
@@ -363,7 +334,7 @@
                     <code
                         >https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1</code
                     >, the query string parameters are the
-                    <code>language=us</code> and the <code></code>page=1
+                    <code>language=us</code> and the <code>page=1</code> in the above URL.
                 </p>
                 <p>
                     <b>Headers:</b> In the headers is where you will specify the
@@ -399,10 +370,7 @@
                     something more complex. If we take the TMDB API as an
                     example, we'll be requesting different resources from a
                     database of movie data (like images, ratings info, release
-                    dates, etc.). Since the data in the APIs response is in a
-                    <abbr title="JavaScript Object Notation">JSON</abbr> file,
-                    we will need to parse it using <code>.then</code> as part of
-                    our <code>fetch()</code>.
+                    dates, etc.). Since the data in the APIs response is in a JSON file, we will need to parse it using <code>.then</code> as part of our <code>fetch()</code>.
                 </p>
                 <p>
                     Remember, the API will only return the data that was
@@ -485,21 +453,17 @@
                     </dd>
                 </dl>
                 <p>
-                    As it's easy to see that there are a plethora of reasons
+                    It's easy to see that there are a plethora of reasons
                     where and why individuals would want to use web APIs. If we
-                    come back to the quote we used to describe APIs:
-                    <q
-                        >code that's already been written by other developers,
-                        designed to make our jobs easier</q
-                    >
-                    the amount of use cases becomes nearly infinite.
+                    come back to the quote we used to describe APIs: 
+                    <q>code that's already been written by other developers, designed to make our jobs easier</q> the amount of use cases becomes nearly infinite.
                 </p>
             </section>
 
             <section class="section-5" id="section-5">
                 <h2>Pros & Cons</h2>
 
-                <h3>PROS</h3>
+                <h3>PROS:</h3>
                 <dl class="pros-list">
                     <dt>Saves Time</dt>
                     <dd>
@@ -545,7 +509,7 @@
                     </dd>
                 </dl>
 
-                <h3>Cons:</h3>
+                <h3>CONS:</h3>
                 <dl>
                     <dt>Third-Party Dependency</dt>
                     <dd>
@@ -560,9 +524,9 @@
                     <dt>Lack of Documentation</dt>
                     <dd>
                         Lack of, or - even worse - confusing documentation of
-                        how to use or the API makes it difficult to implement
+                        how to setup and utitlize the API makes it difficult to implement
                         (our group had a difficult time trying to use/figure out
-                        the Instagram API, or anything from Meta really).
+                        the Instagram API, or anything from Meta realistically).
                     </dd>
                     <dt>Geographical Access</dt>
                     <dd>

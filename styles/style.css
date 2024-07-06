@@ -6,6 +6,7 @@
 	- Box sizing
 	- Media width
 # Base
+  - Site-Wrapper/Body
 	- Typography
 	- Links
 	- Elements
@@ -26,7 +27,7 @@
   margin: 0 auto;
 }
 
-/* body --------------------------------------------- */
+/* Body --------------------------------------------- */
 
 body {
   background-color: #232323;
